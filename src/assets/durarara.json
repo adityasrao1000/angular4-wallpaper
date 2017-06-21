@@ -1,0 +1,13 @@
+[   {
+		"name": "photo01",
+		"src": "./assets/durarara/photo01.png"
+	},
+	{
+		"name": "photo02",
+		"src": "./assets/durarara/photo02.jpg"
+	},
+	{
+		"name": "photo03",
+		"src": "./assets/durarara/photo03.jpg"
+	}
+]

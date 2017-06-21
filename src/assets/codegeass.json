@@ -1,0 +1,13 @@
+[   {
+		"name": "photo01",
+		"src": "./assets/codegeass/photo01.png"
+	},
+	{
+		"name": "photo02",
+		"src": "./assets/codegeass/photo02.jpg"
+	},
+	{
+		"name": "photo03",
+		"src": "./assets/codegeass/photo03.jpg"
+	}
+]

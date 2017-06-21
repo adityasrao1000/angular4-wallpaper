@@ -1,0 +1,13 @@
+[   {
+		"name": "photo01",
+		"src": "./assets/onepiece/photo01.png"
+	},
+	{
+		"name": "photo02",
+		"src": "./assets/onepiece/photo02.jpg"
+	},
+	{
+		"name": "photo03",
+		"src": "./assets/onepiece/photo03.jpg"
+	}
+]

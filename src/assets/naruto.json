@@ -1,0 +1,13 @@
+[   {
+		"name": "photo01",
+		"src": "./assets/naruto/photo01.png"
+	},
+	{
+		"name": "photo02",
+		"src": "./assets/naruto/photo02.jpg"
+	},
+	{
+		"name": "photo03",
+		"src": "./assets/naruto/photo03.jpg"
+	}
+]

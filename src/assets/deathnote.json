@@ -1,0 +1,13 @@
+[   {
+		"name": "photo01",
+		"src": "./assets/deathnote/photo01.png"
+	},
+	{
+		"name": "photo02",
+		"src": "./assets/deathnote/photo02.jpg"
+	},
+	{
+		"name": "photo03",
+		"src": "./assets/deathnote/photo03.jpg"
+	}
+]

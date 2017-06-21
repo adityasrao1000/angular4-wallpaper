@@ -1,0 +1,13 @@
+[   {
+		"name": "photo01",
+		"src": "./assets/aria/photo01.png"
+	},
+	{
+		"name": "photo02",
+		"src": "./assets/aria/photo02.jpg"
+	},
+	{
+		"name": "photo03",
+		"src": "./assets/aria/photo03.jpg"
+	}
+]

@@ -1,0 +1,13 @@
+[   {
+		"name": "photo01",
+		"src": "./assets/inuyasha/photo01.png"
+	},
+	{
+		"name": "photo02",
+		"src": "./assets/inuyasha/photo02.jpg"
+	},
+	{
+		"name": "photo03",
+		"src": "./assets/inuyasha/photo03.jpg"
+	}
+]

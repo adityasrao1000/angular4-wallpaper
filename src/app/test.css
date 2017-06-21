@@ -1,0 +1,20 @@
+.img-responsive
+{
+border:5px solid whitesmoke;
+cursor:pointer;
+-webkit-box-shadow: -4px 6px 45px -14px rgba(0,0,0,0.75);
+-moz-box-shadow: -4px 6px 45px -14px rgba(0,0,0,0.75);
+box-shadow: -4px 6px 45px -14px rgba(0,0,0,0.75);
+}
+
+.img-responsive:hover
+{
+border:5px solid lightgreen;
+}
+
+.report{
+	margin-top: 16px;
+	float: right;
+	font-family: monospace;
+	cursor: pointer;
+}

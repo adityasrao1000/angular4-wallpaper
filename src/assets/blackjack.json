@@ -1,0 +1,13 @@
+[   {
+		"name": "photo01",
+		"src": "./assets/blackjack/photo01.png"
+	},
+	{
+		"name": "photo02",
+		"src": "./assets/blackjack/photo02.jpg"
+	},
+	{
+		"name": "photo03",
+		"src": "./assets/blackjack/photo03.jpg"
+	}
+]

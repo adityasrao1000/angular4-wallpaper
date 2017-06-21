@@ -1,0 +1,30 @@
+iframe{
+  display:block;
+  max-width: 300px;
+  height: 168px;
+  border: none;
+  margin-bottom:25px;
+
+}
+
+.vidcontainer{
+  margin-left:18px;
+}
+
+.frame-container{
+  border-left:8px solid #4FC3F7;
+}
+
+.progress-bar{
+  border-radius:5px;
+}
+
+@media only screen and (max-width: 720px) {
+    .progress-bar{
+     max-width:120px;
+}
+
+    .vidcontainer{
+    	margin-bottom:30px;
+    }
+}
