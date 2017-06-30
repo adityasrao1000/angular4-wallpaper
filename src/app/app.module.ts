@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule }   from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent }  from './app.component';
-import { Navbar }  from './app.navbar';
+import { Navbar }  from './navbar';
 import { ImgSlider }  from './app.imgslider';
 import { ImgScroller }  from './image-scroller.component';
 import { Article }  from './article.component';
@@ -30,19 +30,19 @@ import { HttpService } from './http.service';
     RouterModule.forRoot(routes)
   ],
   declarations: [
-    AppComponent,
-	Navbar,
-    ImgSlider,
-	ImgScroller,
-	Article,
-	Features,
-	video,
-  Mainpage,
-  Test,
-  Wallpapers,
-  Http1,
-  Contacts,
-  NotFound,
+   AppComponent,
+	 Navbar,
+   ImgSlider,
+   ImgScroller,
+	 Article,
+	 Features,
+	 video,
+   Mainpage,
+   Test,
+   Wallpapers,
+   Http1,
+   Contacts,
+   NotFound,
 	 SafePipe 
   ],
   providers: [

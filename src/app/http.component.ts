@@ -4,8 +4,8 @@ import { Wallpaper }                                  from  './wallpaper';
 import { HttpService }                                from  './http.service';
 import { Router, ActivatedRoute }                     from '@angular/router';
 import { DOCUMENT }                                   from '@angular/platform-browser';
+import { Observable }                                 from 'rxjs';
 import 'rxjs/add/operator/toPromise';
-import { Observable } from 'rxjs';
 import 'rxjs/Rx';
 
 @Component({
@@ -22,10 +22,10 @@ export class Http1 implements OnInit {
    observableBooks: Observable<Wallpaper[]>;
    books: Wallpaper[];
    errorMessage: string;
-   src:string;
-   imglink:string;
-   display = "none"
-
+   src: string;
+   imglink: string;
+   display = "none";
+   
    constructor(private bookService: HttpService, private route: ActivatedRoute, @Inject(DOCUMENT) private document: Document) { }
   
    ngOnInit(): void {
@@ -42,13 +42,12 @@ export class Http1 implements OnInit {
   }
 
   show(link):void{
-
+  
   if(this.display=="none"){
   this.display = "block";
   }
-
    this.imglink= link;
-
+   
    //scroll to top of page
    this.document.body.scrollTop = 30;
   }

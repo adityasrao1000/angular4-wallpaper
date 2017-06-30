@@ -11,7 +11,7 @@
         <input type="text" class="form-control" id="nav-search" #ser placeholder=" Search" (keyup)="search(ser.value)" autocomplete="off">
         <div class="dropdown-content">
          <div *ngFor="let link of links">
-           <a href="{{link}}">{{link}}</a>   
+           <a class="link" href="{{link}}">{{link}}</a>   
          </div>  
         </div>
         
