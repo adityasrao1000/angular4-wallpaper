@@ -4,7 +4,7 @@ import { FormsModule }   from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent }  from './app.component';
 import { Navbar }  from './navbar';
-import { ImgSlider }  from './app.imgslider';
+import { ImgSlider }  from './image-slider';
 import { ImgScroller }  from './image-scroller.component';
 import { Article }  from './article.component';
 import { Features }  from './features.component';
