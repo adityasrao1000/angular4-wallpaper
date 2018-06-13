@@ -4,25 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { Navbar } from './navbar';
-import { ImgSlider } from './app.imgslider';
+import { ImgSliderComponent } from './app.imgslider';
 import { ImgScroller } from './image-scroller.component';
-import { Article } from './article.component';
-import { Features } from './features.component';
+import { ArticleComponent } from './article.component';
+import { FeaturesComponent } from './features.component';
 import { video, SafePipe } from './video.component';
-import { Mainpage } from './mainpage.component';
-import { AppRoutingModule, routes } from './app-routing.module';
-import { Test } from './test.component';
+import { MainpageComponent } from './mainpage.component';
+import { routes } from './app-routing.module';
+import { TestComponent } from './test.component';
 import { Wallpapers } from './wallpapers.component';
-import { Http1 } from './http.component';
-import { Contacts } from './contacts.component';
-import { NotFound } from './pagenotfound.component';
+import { Http1Component } from './http.component';
+import { ContactsComponent } from './contacts.component';
+import { NotFoundComponent } from './pagenotfound.component';
 import { HttpModule } from '@angular/http';
 import { HttpService } from './http.service';
 
 @NgModule({
   imports: [
     BrowserModule,
-    InfiniteScrollModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(routes)
@@ -30,17 +29,17 @@ import { HttpService } from './http.service';
   declarations: [
    AppComponent,
    Navbar,
-   ImgSlider,
+   ImgSliderComponent,
    ImgScroller,
-   Article,
-   Features,
+   ArticleComponent,
+   FeaturesComponent,
    video,
-   Mainpage,
-   Test,
+   MainpageComponent,
+   TestComponent,
    Wallpapers,
-   Http1,
-   Contacts,
-   NotFound,
+   Http1Component,
+   ContactsComponent,
+   NotFoundComponent,
    SafePipe
   ],
   providers: [

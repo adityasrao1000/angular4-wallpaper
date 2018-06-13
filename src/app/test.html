@@ -4,7 +4,7 @@
 <div style="height:4px; width:40px; margin:auto; background-color:lightgreen; margin-top:7px;"></div>
 <br><br><br>
 <p style="text-align:center;color:grey">infinit-scroll implemented scroll to the bottom to load more</p>
-<div *ngFor="let c of categories">
+<div *ngFor="let c of allcategories">
 <div style="max-width:500px; max-height:350px; margin:auto;">
  <div class="row">
   <div class="col-xs-6">
@@ -21,10 +21,6 @@
 <br>
 </div>
 
-<div 
-     infinite-scroll
-     [infiniteScrollDistance]="0"
-     [infiniteScrollThrottle]="10"
-     (scrolled)="onScrollDown()">
+<div>
 </div>
 </div>

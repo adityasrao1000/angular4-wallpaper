@@ -10,7 +10,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 })
 
 @Injectable()
-export class Wallpapers implements OnInit, OnDestroy { 
+export class Wallpapers implements OnInit, OnDestroy {
   id: string;
   private sub: any;
   private router: Router;

@@ -5,9 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './article.html',
   styleUrls: ['./article.css']
 })
-export class Article { 
-  color:string="whitesmoke";
-  over():void{
-	 this.color="black";
-  }  
+export class ArticleComponent {
+  color = 'whitesmoke';
+  over(): void {
+   this.color = 'black';
+  }
 }

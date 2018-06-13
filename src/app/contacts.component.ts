@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
   templateUrl: './contacts.html',
   styleUrls: ['./contacts.css']
 })
-export class Contacts {
-  
+export class ContactsComponent {
+
   submitted = false;
-  
+
   onSubmit() { this.submitted = true; }
 }

@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   templateUrl: './img-scroller.html',
   styleUrls: ['./scrollbar.css']
 })
-export class Categories { 
+export class CategoriesComponent {
 
 }
