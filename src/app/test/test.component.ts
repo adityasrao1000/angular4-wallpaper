@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'test-app',
-  templateUrl: './test.html',
-  styleUrls: ['./test.css', './app.component.css'],
+  templateUrl: './test.component.html',
+  styleUrls: ['./test.component.css', '../app.component.css'],
 })
 
 

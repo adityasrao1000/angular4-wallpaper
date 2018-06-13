@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
 
 @Component({
   selector: 'wallpaper',
-  templateUrl: './wallpaper.html',
-  styleUrls: ['./wallpaper.css']
+  templateUrl: './wallpaper.component.html',
+  styleUrls: ['./wallpaper.component.css']
 })
 
 @Injectable()

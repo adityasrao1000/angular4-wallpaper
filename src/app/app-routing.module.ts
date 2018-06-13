@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { MainpageComponent } from './mainpage.component';
-import { TestComponent } from './test.component';
-import { WallpapersComponent } from './wallpapers.component';
+import { TestComponent } from './test/test.component';
+import { WallpapersComponent } from './wallpaper/wallpapers.component';
 import { ContactsComponent } from './contacts.component';
 import { NotFoundComponent } from './pagenotfound.component';
 

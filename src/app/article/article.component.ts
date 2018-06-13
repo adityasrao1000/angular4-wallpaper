@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'article',
-  templateUrl: './article.html',
-  styleUrls: ['./article.css']
+  templateUrl: './article.component.html',
+  styleUrls: ['./article.component.css']
 })
 export class ArticleComponent {
   color = 'whitesmoke';

@@ -6,13 +6,13 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar';
 import { ImgSliderComponent } from './app.imgslider';
 import { ImgScrollerComponent } from './image-scroller.component';
-import { ArticleComponent } from './article.component';
+import { ArticleComponent } from './article/article.component';
 import { FeaturesComponent } from './features.component';
 import { VideoComponent, SafePipe } from './video.component';
 import { MainpageComponent } from './mainpage.component';
 import { routes } from './app-routing.module';
-import { TestComponent } from './test.component';
-import { WallpapersComponent } from './wallpapers.component';
+import { TestComponent } from './test/test.component';
+import { WallpapersComponent } from './wallpaper/wallpapers.component';
 import { Http1Component } from './http.component';
 import { ContactsComponent } from './contacts.component';
 import { NotFoundComponent } from './pagenotfound.component';
@@ -30,7 +30,8 @@ import { HttpService } from './http.service';
    AppComponent,
    NavbarComponent,
    ImgSliderComponent,
-   ImgScrollerComponent,
+   ImgScrollerComponent
+   ,
    ArticleComponent,
    FeaturesComponent,
    VideoComponent,
