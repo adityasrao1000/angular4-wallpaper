@@ -1,25 +1,22 @@
-import { Injectable}                   from '@angular/core';
-import { Http, Response }              from '@angular/http';
-import { Observable }                  from 'rxjs';
-import { Http1 }                       from './http.component';
-import { Wallpaper }                   from './wallpaper';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/toPromise';
+import { Injectable} from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { Http1 } from './http.component';
+import { Wallpaper } from './wallpaper';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable()
-export class HttpService{
+export class HttpService {
 
 
-    constructor(private http:Http) {}
+    constructor(private http: Http) {}
     getBooksWithObservable(id): Observable<Wallpaper[]> {
         return this.http.get(`./assets/${id}.json`)
-                .map(this.extractData)
+                .pipe(this.extractData)
                 .catch(this.handleErrorObservable);
-      
     }
-   
+
     private extractData(res: Response) {
-        let body = res.json();
+        const body = res.json();
         return body;
     }
     private handleErrorObservable (error: Response | any) {
@@ -29,5 +26,5 @@ export class HttpService{
     private handleErrorPromise (error: Response | any) {
         console.error(error.message || error);
         return Promise.reject(error.message || error);
-    }   
+    }
 }

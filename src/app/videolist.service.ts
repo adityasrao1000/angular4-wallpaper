@@ -1,4 +1,4 @@
-export class VideoList{
+export class VideoList {
  name: string;
  url: string;
  date: string;

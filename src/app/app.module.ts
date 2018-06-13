@@ -1,49 +1,47 @@
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent }  from './app.component';
-import { Navbar }  from './navbar';
-import { ImgSlider }  from './app.imgslider';
-import { ImgScroller }  from './image-scroller.component';
-import { Article }  from './article.component';
-import { Features }  from './features.component';
-import { video, SafePipe }  from './video.component';
-import { Mainpage }  from './mainpage.component';
-import { AppRoutingModule, routes }     from './app-routing.module';
+import { AppComponent } from './app.component';
+import { Navbar } from './navbar';
+import { ImgSlider } from './app.imgslider';
+import { ImgScroller } from './image-scroller.component';
+import { Article } from './article.component';
+import { Features } from './features.component';
+import { video, SafePipe } from './video.component';
+import { Mainpage } from './mainpage.component';
+import { AppRoutingModule, routes } from './app-routing.module';
 import { Test } from './test.component';
 import { Wallpapers } from './wallpapers.component';
 import { Http1 } from './http.component';
 import { Contacts } from './contacts.component';
 import { NotFound } from './pagenotfound.component';
-import { HttpModule }    from '@angular/http';
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InfiniteScrollModule } from 'angular2-infinite-scroll';
+import { HttpModule } from '@angular/http';
 import { HttpService } from './http.service';
 
 @NgModule({
   imports: [
     BrowserModule,
-    InfiniteScrollModule, 
+    InfiniteScrollModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(routes)
   ],
   declarations: [
    AppComponent,
-	 Navbar,
+   Navbar,
    ImgSlider,
    ImgScroller,
-	 Article,
-	 Features,
-	 video,
+   Article,
+   Features,
+   video,
    Mainpage,
    Test,
    Wallpapers,
    Http1,
    Contacts,
    NotFound,
-	 SafePipe 
+   SafePipe
   ],
   providers: [
         HttpService
