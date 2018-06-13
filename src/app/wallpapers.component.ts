@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Injectable } from '@angular/core';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 @Component({
   selector: 'wallpaper',
@@ -10,7 +9,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 })
 
 @Injectable()
-export class Wallpapers implements OnInit, OnDestroy {
+export class WallpapersComponent implements OnInit, OnDestroy {
   id: string;
   private sub: any;
   private router: Router;

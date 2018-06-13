@@ -1,5 +1,5 @@
-import {Pipe, PipeTransform, Component, NgModule} from '@angular/core'
-import { DomSanitizer } from '@angular/platform-browser'
+import {Pipe, PipeTransform, Component, NgModule} from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 import { VideoList } from './videolist.service';
 
 @Pipe({ name: 'safe' })
@@ -15,7 +15,7 @@ export class SafePipe implements PipeTransform {
   templateUrl: './video.html',
   styleUrls: ['./video.css']
 })
-export class video {
+export class VideoComponent {
 
   videos: VideoList[] = [
     {name: 'Frozen', url: 'https://www.youtube.com/embed/FLzfXQSPBOg?autoplay=0&showinfo=0&controls=0', date: '1/1/2017', interest: '95%'},

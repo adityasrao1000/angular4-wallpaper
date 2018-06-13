@@ -3,16 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { Navbar } from './navbar';
+import { NavbarComponent } from './navbar';
 import { ImgSliderComponent } from './app.imgslider';
-import { ImgScroller } from './image-scroller.component';
+import { ImgScrollerComponent } from './image-scroller.component';
 import { ArticleComponent } from './article.component';
 import { FeaturesComponent } from './features.component';
-import { video, SafePipe } from './video.component';
+import { VideoComponent, SafePipe } from './video.component';
 import { MainpageComponent } from './mainpage.component';
 import { routes } from './app-routing.module';
 import { TestComponent } from './test.component';
-import { Wallpapers } from './wallpapers.component';
+import { WallpapersComponent } from './wallpapers.component';
 import { Http1Component } from './http.component';
 import { ContactsComponent } from './contacts.component';
 import { NotFoundComponent } from './pagenotfound.component';
@@ -28,15 +28,15 @@ import { HttpService } from './http.service';
   ],
   declarations: [
    AppComponent,
-   Navbar,
+   NavbarComponent,
    ImgSliderComponent,
-   ImgScroller,
+   ImgScrollerComponent,
    ArticleComponent,
    FeaturesComponent,
-   video,
+   VideoComponent,
    MainpageComponent,
    TestComponent,
-   Wallpapers,
+   WallpapersComponent,
    Http1Component,
    ContactsComponent,
    NotFoundComponent,
