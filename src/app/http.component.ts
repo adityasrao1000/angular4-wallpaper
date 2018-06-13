@@ -1,5 +1,5 @@
 import {Component, OnInit, Inject, OnDestroy  } from '@angular/core';
-import { Wallpaper } from './wallpaper';
+import { Wallpaper } from './wallpaper/wallpaper';
 import { HttpService } from './http.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DOCUMENT } from '@angular/platform-browser';

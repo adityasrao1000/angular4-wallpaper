@@ -12,8 +12,8 @@ export class SafePipe implements PipeTransform {
 
 @Component({
   selector: 'videos',
-  templateUrl: './video.html',
-  styleUrls: ['./video.css']
+  templateUrl: './video.component.html',
+  styleUrls: ['./video.component.css']
 })
 export class VideoComponent {
 
