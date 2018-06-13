@@ -2,11 +2,9 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'main-page',
-  templateUrl: './mainpage.html',
-  styleUrls: ['./mainpage.css']
+  templateUrl: './mainpage.component.html',
+  styleUrls: ['./mainpage.component.css']
 })
-
-
 
 export class MainpageComponent {
 

@@ -7,17 +7,17 @@ import { NavbarComponent } from './navbar';
 import { ImgSliderComponent } from './app.imgslider';
 import { ImgScrollerComponent } from './image-scroller.component';
 import { ArticleComponent } from './article/article.component';
-import { FeaturesComponent } from './features.component';
+import { FeaturesComponent } from './features/features.component';
 import { VideoComponent, SafePipe } from './video/video.component';
-import { MainpageComponent } from './mainpage.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
 import { routes } from './app-routing.module';
 import { TestComponent } from './test/test.component';
 import { WallpapersComponent } from './wallpaper/wallpapers.component';
-import { Http1Component } from './http.component';
+import { Http1Component } from './http/http.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { NotFoundComponent } from './pagenotfound.component';
+import { NotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { HttpModule } from '@angular/http';
-import { HttpService } from './http.service';
+import { HttpService } from './http/http.service';
 
 @NgModule({
   imports: [

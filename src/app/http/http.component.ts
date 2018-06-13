@@ -1,13 +1,13 @@
 import {Component, OnInit, Inject, OnDestroy  } from '@angular/core';
-import { Wallpaper } from './wallpaper/wallpaper';
+import { Wallpaper } from '../wallpaper/wallpaper';
 import { HttpService } from './http.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DOCUMENT } from '@angular/platform-browser';
 
 @Component({
     selector: 'http',
-    templateUrl: './http.html',
-    styleUrls: ['./scrollbar.css', './http.css']
+    templateUrl: './http.component.html',
+    styleUrls: ['../scrollbar.css', './http.component.css']
 })
 
 export class Http1Component implements OnInit, OnDestroy {

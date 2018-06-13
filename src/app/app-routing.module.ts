@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { MainpageComponent } from './mainpage.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
 import { TestComponent } from './test/test.component';
 import { WallpapersComponent } from './wallpaper/wallpapers.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { NotFoundComponent } from './pagenotfound.component';
+import { NotFoundComponent } from './pagenotfound/pagenotfound.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
