@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { ImgSliderComponent } from './app.imgslider';
-import { ImgScrollerComponent } from './image-scroller.component';
+import { ImageSliderComponent } from './image-slider/image-slider.component';
+import { ImgScrollerComponent } from './image-scroller/image-scroller.component';
 import { ArticleComponent } from './article/article.component';
 import { FeaturesComponent } from './features/features.component';
 import { VideoComponent, SafePipe } from './video/video.component';
@@ -30,7 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
    AppComponent,
    NavbarComponent,
-   ImgSliderComponent,
+   ImageSliderComponent,
    ImgScrollerComponent
 ,
    ArticleComponent,
