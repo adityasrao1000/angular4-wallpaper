@@ -1,7 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { Navbar } from './navbar';
+import { NavbarComponent } from './navbar.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -11,7 +11,7 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
-        Navbar
+        NavbarComponent
       ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
     }).compileComponents();

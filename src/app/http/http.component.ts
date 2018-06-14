@@ -16,7 +16,7 @@ export class Http1Component implements OnInit, OnDestroy {
    id: string;
    private sub: any;
    observableBooks: Wallpaper[] = [];
-   books: Wallpaper[];
+   books: Wallpaper[] = [];
    errorMessage: string;
    src: string;
    imglink: string;
@@ -26,11 +26,9 @@ export class Http1Component implements OnInit, OnDestroy {
 
    ngOnInit(): void {
       this.sub = this.route.params.subscribe(params => {
-       this.id = params['id'];
+       this.bookService.getBooksWithObservable(params['id'])
+       .then(result => this.books = result, error => console.log(error));
       });
-
-     this.bookService.getBooksWithObservable(this.id)
-     .subscribe(result => this.books = result);
    }
 
    ngOnDestroy() {
@@ -45,7 +43,7 @@ export class Http1Component implements OnInit, OnDestroy {
    this.imglink = link;
 
    // scroll to top of page
-   this.document.body.scrollTop = 30;
+   this.document.getElementById('wallpaper').scrollIntoView();
   }
 
 }
