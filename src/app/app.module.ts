@@ -28,26 +28,25 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   declarations: [
-   AppComponent,
-   NavbarComponent,
-   ImageSliderComponent,
-   ImgScrollerComponent
-,
-   ArticleComponent,
-   FeaturesComponent,
-   VideoComponent,
-   MainpageComponent,
-   TestComponent,
-   WallpapersComponent,
-   Http1Component,
-   ContactsComponent,
-   NotFoundComponent,
-   SafePipe
+    AppComponent,
+    NavbarComponent,
+    ImageSliderComponent,
+    ImgScrollerComponent,
+    ArticleComponent,
+    FeaturesComponent,
+    VideoComponent,
+    MainpageComponent,
+    TestComponent,
+    WallpapersComponent,
+    Http1Component,
+    ContactsComponent,
+    NotFoundComponent,
+    SafePipe
   ],
   providers: [
-        HttpService
+    HttpService
   ],
-  exports: [ RouterModule ],
-  bootstrap: [ AppComponent ]
+  exports: [RouterModule],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
