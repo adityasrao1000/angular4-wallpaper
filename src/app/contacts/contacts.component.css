@@ -1,62 +1,66 @@
-#form1{
-	max-width:600px;
-	margin:auto;
-	border: 7px solid #03A9F4;
-	padding:16px;
-	border-radius:4px;
-	background-color:whitesmoke;
-
-	-webkit-box-shadow: -8px 10px 18px -4px rgba(199,202,207,1);
-    -moz-box-shadow: -8px 10px 18px -4px rgba(199,202,207,1);
-    box-shadow: -8px 10px 18px -4px rgba(199,202,207,1);
+#form1 {
+  max-width: 600px;
+  margin: auto;
+  border: 7px solid #03A9F4;
+  padding: 16px;
+  border-radius: 4px;
+  background-color: whitesmoke;
+  -webkit-box-shadow: -8px 10px 18px -4px rgba(199, 202, 207, 1);
+  -moz-box-shadow: -8px 10px 18px -4px rgba(199, 202, 207, 1);
+  box-shadow: -8px 10px 18px -4px rgba(199, 202, 207, 1);
 }
 
-#email{
-	border: none;
-	border-bottom: 2px solid lightblue;
+#email {
+  border: none;
+  border-bottom: 2px solid lightblue;
 }
 
-img{
-	margin: auto;
-}
-.input-group-addon{
-	border:none;
-}
-textarea{
-	border: none;
-	border-top: 2px solid lightblue;
-	border-bottom: 2px solid lightblue;
+img {
+  margin: auto;
 }
 
-.btn-default{
-	background-color: lightblue;
-	color: black;
-	border: none;
+.input-group-addon {
+  border: none;
 }
 
-.btn-default:hover{
-    background-color: #607D8B;
-    color: white;
-}
-h2{
-	text-align: center;
-	color: grey;
-    text-shadow: 2px 2px 4px lightgrey;
+textarea {
+  border: none;
+  border-top: 2px solid lightblue;
+  border-bottom: 2px solid lightblue;
 }
 
-h4{
-	color: grey;
+.btn-default {
+  background-color: lightblue;
+  color: black;
+  border: none;
 }
 
-.glyphicon-user{
-	color:teal;
+.btn-default:hover {
+  background-color: #607D8B;
+  color: white;
 }
 
-.ng-valid[required], .ng-valid.required  {
-  border-left: 5px solid #42A948; /* green */
+h2 {
+  text-align: center;
+  color: grey;
+  text-shadow: 2px 2px 4px lightgrey;
 }
 
-.ng-invalid:not(form)  {
-  border-left: 5px solid #a94442; /* red */
+h4 {
+  color: grey;
 }
 
+.glyphicon-user {
+  color: teal;
+}
+
+.ng-valid[required],
+.ng-valid.required {
+  border-left: 5px solid #42A948;
+  /* green */
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442;
+  /* red */
+}

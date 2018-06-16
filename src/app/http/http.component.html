@@ -1,20 +1,20 @@
 <br>
 <div [style.display]="display">
- <img src="{{imglink}}" alt="wallpaper" [ngClass]="['img-responsive', 'animate']" id= "wallpaper">
- 
- <a href="{{imglink}}" download>
-  <button type="button" class="btn btn-default">Download Max Resolution</button>
- </a>
+  <img src="{{imglink}}" alt="wallpaper" [ngClass]="['img-responsive', 'animate']" id="wallpaper">
+
+  <a href="{{imglink}}" download>
+    <button type="button" class="btn btn-default">Download Max Resolution</button>
+  </a>
 </div>
 
 <br>
 <hr>
 <p style="text-align:center; color:lightgrey">Click on the image to view</p>
 <br>
-<div  id="style-1">
+<div id="style-1">
   <ul type="none">
-   <li *ngFor="let book of books" >
-     <img class="img-responsive thumbnail" height="200px" width="350px"  src="{{book.src}}" alt="image" (click)="show(book.src)">
-   </li>
+    <li *ngFor="let book of books">
+      <img class="img-responsive thumbnail" height="200px" width="350px" src="{{book.src}}" alt="image" (click)="show(book.src)">
+    </li>
   </ul>
 </div>

@@ -1,4 +1,4 @@
-import { Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Wallpaper } from '../wallpaper/wallpaper';
 
@@ -6,10 +6,10 @@ import { Wallpaper } from '../wallpaper/wallpaper';
 export class HttpService {
 
 
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient) { }
     getBooksWithObservable(id): Promise<Wallpaper[]> {
         return this.http.get<any>(`./assets/${id}.json`)
-        .toPromise();
-      }
+            .toPromise();
+    }
 
 }

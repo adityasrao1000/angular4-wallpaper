@@ -7,11 +7,11 @@ import { NotFoundComponent } from './pagenotfound/pagenotfound.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home',  component: MainpageComponent },
+  { path: 'home', component: MainpageComponent },
   { path: 'categories', component: TestComponent },
   { path: 'categories/:id', component: WallpapersComponent },
   { path: 'contacts', component: ContactsComponent },
   { component: NotFoundComponent, path: '**' }
 ];
 
-export class AppRoutingModule {}
+export class AppRoutingModule { }

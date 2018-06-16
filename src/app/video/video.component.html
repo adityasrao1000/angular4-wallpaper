@@ -1,28 +1,29 @@
-
 <div *ngFor="let v of videos">
-<div class="vidcontainer" >
-<div class="row">
- <div class="col-sm-6">
-  <div class="frame-container">
-   <iframe  [src]=" v.url | safe" frameborder="0" border="0">
-    <p>Sorry your browser does not support iframes</p>
-   </iframe>
-  </div>
- </div>
- <div class="col-sm-6">
-  <h3 style="margin-top:-3px;">{{v.name}}</h3>
-  <p style="color:grey"><b>release date: {{v.date}}</b></p>
+  <div class="vidcontainer">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="frame-container">
+          <iframe [src]=" v.url | safe" frameborder="0" border="0">
+            <p>Sorry your browser does not support iframes</p>
+          </iframe>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <h3 style="margin-top:-3px;">{{v.name}}</h3>
+        <p style="color:grey">
+          <b>release date: {{v.date}}</b>
+        </p>
 
-  <div class="row">
-   <div class="col-xs-4">
-     <b>Popularity:</b>
-   </div>
-   <div class="col-xs-8">
-     <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" [style.width]="v.interest">
-      {{v.interest}}
-     </div>
-   </div>
-  </div>
-   
-</div>
-</div>
+        <div class="row">
+          <div class="col-xs-4">
+            <b>Popularity:</b>
+          </div>
+          <div class="col-xs-8">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" [style.width]="v.interest">
+              {{v.interest}}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>

@@ -27,23 +27,23 @@ export class NavbarComponent {
       this.links.push('categories');
       this.links.push('contacts');
 
-    if (search.startsWith('co')) {
-      this.links = [];
-      this.links.push('contacts');
-    }
-    if (search.startsWith('ca')) {
-      this.links = [];
-      this.links.push('categories');
-    }
+      if (search.startsWith('co')) {
+        this.links = [];
+        this.links.push('contacts');
+      }
+      if (search.startsWith('ca')) {
+        this.links = [];
+        this.links.push('categories');
+      }
     }
 
     if (search.startsWith('l')) {
-    this.links.push('latest');
+      this.links.push('latest');
     }
   }
 
- clear() {
- this.links = [];
- }
+  clear() {
+    this.links = [];
+  }
 }
 

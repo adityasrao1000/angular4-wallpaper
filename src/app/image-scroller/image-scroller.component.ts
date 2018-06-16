@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class ImgScrollerComponent {
- path = './assets/img/';
- imgs: string[] = ['photo01.png', 'photo02.jpg', 'photo03.jpg', 'photo04.jpg', 'photo05.jpg', 'photo06.jpg',
-                   'photo07.jpeg', 'photo08.jpg', 'photo09.png', 'photo10.jpg'];
+  path = './assets/img/';
+  imgs: string[] = ['photo01.png', 'photo02.jpg', 'photo03.jpg', 'photo04.jpg', 'photo05.jpg', 'photo06.jpg',
+    'photo07.jpeg', 'photo08.jpg', 'photo09.png', 'photo10.jpg'];
 }

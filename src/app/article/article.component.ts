@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class ArticleComponent {
   color = 'whitesmoke';
   over(): void {
-   this.color = 'black';
+    this.color = 'black';
   }
 }
