@@ -1,5 +1,5 @@
 .img-responsive {
-  border: 5px solid whitesmoke;
+  border: 5px solid #232323;
   cursor: pointer;
   -webkit-box-shadow: -4px 6px 45px -14px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -4px 6px 45px -14px rgba(0, 0, 0, 0.75);
@@ -25,7 +25,16 @@
   margin-top: 7px;
 }
 
-.container-fluid{
-  background-color:#f9fbff;
-  height:100%
+.container-fluid {
+  height: 100%
+}
+
+.img-card {
+  max-width: 500px;
+  max-height: 350px;
+  margin: auto;
+}
+
+h3 {
+  color: grey;
 }

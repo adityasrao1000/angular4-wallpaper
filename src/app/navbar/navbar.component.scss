@@ -1,0 +1,10 @@
+.navbar {
+  background-color: #232323;
+  .navbar-nav>li>a {
+    color: #616060;
+    .active {
+      color: white;
+      background: inherit;
+    }
+  }
+}
