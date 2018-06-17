@@ -22,7 +22,12 @@ body {
 #nav-search {
   border-radius: 3px;
   width: 250px;
-  border: 6px solid #4b4b4c;
+  border: none;
+}
+
+input {
+  background-color: #555759;
+  color: lightgrey;
 }
 
 h1 {
@@ -337,7 +342,7 @@ input[type=radio]#button-5:checked~.arrows#arrow-4 {
 
 .mobile-nav li a {
   display: block;
-  color: white;
+  color: grey;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;

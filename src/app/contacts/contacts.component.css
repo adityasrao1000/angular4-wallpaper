@@ -1,15 +1,14 @@
 #form1 {
   max-width: 600px;
   margin: auto;
-  border: 7px solid grey;
   padding: 16px;
   border-radius: 4px;
   background-color: #232323;
+  color: grey;
 }
 
 #email {
   border: none;
-  border-bottom: 2px solid grey;
 }
 
 img {
@@ -20,10 +19,15 @@ img {
   border: none;
 }
 
+input {
+  background-color: #302f2f;
+}
+
 textarea {
   border: none;
-  border-top: 2px solid lightblue;
-  border-bottom: 2px solid lightblue;
+  resize: none;
+  background-color: #302f2f;
+  
 }
 
 .btn-default {
