@@ -7,7 +7,7 @@ import { DOCUMENT } from '@angular/platform-browser';
 @Component({
   selector: 'http',
   templateUrl: './http.component.html',
-  styleUrls: ['../scrollbar.css', './http.component.css']
+  styleUrls: ['../scrollbar.css', './http.component.scss']
 })
 
 export class Http1Component implements OnInit, OnDestroy {

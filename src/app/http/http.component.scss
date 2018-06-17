@@ -2,7 +2,7 @@
   width: 740px;
   height: 380px;
   margin: auto;
-  border: 5px solid #302f2f;
+  border: 5px solid #232323;
   border-radius: 2px;
   -webkit-box-shadow: 0px 4px 16px -2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 4px 16px -2px rgba(0, 0, 0, 0.75);
@@ -10,10 +10,10 @@
 }
 
 .btn {
-  background-color: #26A69A;
-  color: white;
-  margin-left: 25%;
-  margin-top: 13px;
+  background-color: #232323;
+  color: #cc3e4a;
+  margin-left: 23%;
+  margin-top: 25px;
   border: none;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .btn:hover {
-  background-color: #00897B;
+  color: grey;
 }
 
 .animate {
