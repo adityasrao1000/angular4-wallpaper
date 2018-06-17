@@ -1,3 +1,6 @@
+.container-fluid{
+  padding: 2%;
+}
 .img-responsive {
   border: 5px solid #232323;
   cursor: pointer;
