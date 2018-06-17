@@ -16,3 +16,16 @@
   font-family: monospace;
   cursor: pointer;
 }
+
+.bar {
+  height: 4px;
+  width: 40px;
+  margin: auto;
+  background-color: lightgreen;
+  margin-top: 7px;
+}
+
+.container-fluid{
+  background-color:#f9fbff;
+  height:100%
+}

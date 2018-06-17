@@ -1,14 +1,14 @@
-<div style="background-color:#f9fbff">
+<div class="container-fluid" infiniteScroll [infiniteScrollDistance]=".05" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
   <br>
   <h3>
     <i>{{title}}</i>
   </h3>
-  <div style="height:4px; width:40px; margin:auto; background-color:lightgreen; margin-top:7px;"></div>
+  <div class="bar"></div>
   <br>
   <br>
   <br>
   <p style="text-align:center;color:grey">infinit-scroll implemented scroll to the bottom to load more</p>
-  <div *ngFor="let c of allcategories">
+  <div *ngFor="let c of categories">
     <div style="max-width:500px; max-height:350px; margin:auto;">
       <div class="row">
         <div class="col-xs-6">
