@@ -15,15 +15,14 @@
   margin-left: 23%;
   margin-top: 25px;
   border: none;
+  &:hover {
+    color: grey;
+  }
 }
 
 .thumbnail {
   background-color: #302f2f;
   border: none;
-}
-
-.btn:hover {
-  color: grey;
 }
 
 .animate {

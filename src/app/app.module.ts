@@ -19,6 +19,8 @@ import { NotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { HttpService } from './http/http.service';
 import { HttpClientModule } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { SearchPipe } from './navbar/search.pipe';
 
 @NgModule({
   imports: [
@@ -26,7 +28,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     FormsModule,
     InfiniteScrollModule,
     RouterModule.forRoot(routes),
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   declarations: [
     AppComponent,
@@ -42,7 +45,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     Http1Component,
     ContactsComponent,
     NotFoundComponent,
-    SafePipe
+    SafePipe,
+    SearchPipe
   ],
   providers: [
     HttpService

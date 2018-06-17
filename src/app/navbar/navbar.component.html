@@ -1,6 +1,6 @@
 <nav class="navbar">
   <div class="container-fluid">
-    <ul class="nav navbar-nav">
+    <ul class="nav">
       <li>
         <a routerLink="/home" routerLinkActive="active">Home</a>
       </li>
@@ -14,11 +14,11 @@
         <a routerLink="/contacts" routerLinkActive="active">Contacts</a>
       </li>
     </ul>
-    <form class="navbar-form navbar-left">
+    <form class="navbar-form">
       <div class="input-group">
-        <input type="text" class="form-control" id="nav-search" #ser placeholder=" Search" (keyup)="search(ser.value)" autocomplete="off">
+        <input type="text" class="form-control" id="nav-search" [(ngModel)]="ser" [ngModelOptions]="{standalone: true}" placeholder=" Search" autocomplete="off">
         <div class="dropdown-content">
-          <div *ngFor="let link of links">
+          <div *ngFor="let link of links  | search: ser">
             <a class="link" href="{{link}}">{{link}}</a>
           </div>
         </div>
@@ -60,10 +60,10 @@
       </b>
     </li>
   </ul>
-  <input type="text" id="search-bar" class="form-control" placeholder=" search" #ser1 (keyup)="search(ser1.value)" autocomplete="off">
+  <input type="text" id="search-bar" class="form-control" placeholder=" search" [(ngModel)]="ser1" [ngModelOptions]="{standalone: true}"  autocomplete="off">
 </div>
 <div class="dropdown-content two">
-  <div *ngFor="let link of links">
+  <div *ngFor="let link of links | search: ser1">
     <a href="{{link}}">{{link}}</a>
   </div>
 </div>
