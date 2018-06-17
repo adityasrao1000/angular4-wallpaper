@@ -18,12 +18,13 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { NotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { HttpService } from './http/http.service';
 import { HttpClientModule } from '@angular/common/http';
-
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
+    InfiniteScrollModule,
     RouterModule.forRoot(routes),
     HttpClientModule
   ],
