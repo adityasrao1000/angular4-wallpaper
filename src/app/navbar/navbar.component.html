@@ -19,7 +19,7 @@
         <input type="text" class="form-control" id="nav-search" [(ngModel)]="ser" [ngModelOptions]="{standalone: true}" placeholder=" Search" autocomplete="off">
         <div class="dropdown-content">
           <div *ngFor="let link of links  | search: ser">
-            <a class="link" href="{{link}}">{{link}}</a>
+            <a class="link" [routerLink]="[link]">{{link}}</a>
           </div>
         </div>
 
@@ -64,6 +64,6 @@
 </div>
 <div class="dropdown-content two">
   <div *ngFor="let link of links | search: ser1">
-    <a href="{{link}}">{{link}}</a>
+    <a [routerLink]="[link]">{{link}}</a>
   </div>
 </div>
