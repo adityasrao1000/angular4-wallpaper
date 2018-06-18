@@ -18,7 +18,10 @@ export class SafePipe implements PipeTransform {
 export class VideoComponent {
 
   videos: VideoList[] = [
-    { name: 'Frozen', url: 'https://www.youtube.com/embed/FLzfXQSPBOg?autoplay=0&showinfo=0&controls=0', date: '1/1/2017', interest: '95%' },
+    {
+      name: 'Frozen', url: 'https://www.youtube.com/embed/FLzfXQSPBOg?autoplay=0&showinfo=0&controls=0',
+      date: '1/1/2017', interest: '95%'
+    },
     { name: 'Ghost in Shell', url: 'https://www.youtube.com/embed/G4VmJcZR0Yg?controls=0', date: '2/1/2017', interest: '72%' },
     { name: 'Attack on Titan Season 2', url: 'https://www.youtube.com/embed/VMVol1nTbDs?controls=0', date: '4/1/2017', interest: '88%' }
   ];
