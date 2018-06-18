@@ -2,7 +2,7 @@
   height: 170px;
   width: 170px;
   border-radius: 50%;
-  border: 9px solid #dde4ff;
+  border: 9px solid #222222;
   display: block;
   margin: auto;
   cursor: pointer;
@@ -13,7 +13,7 @@ h3 {
 }
 
 .round:hover {
-  border: 9px solid lightblue;
+  border: 9px solid grey;
   -webkit-animation: rotatey 400ms ease-out;
   -moz-animation: rotatey 400ms ease-out;
   animation: rotatey 400ms ease-out;

@@ -27,6 +27,9 @@
 input {
   background-color: #555759;
   color: lightgrey;
+  &:focus {
+    background-color: lightgrey;
+  }
 }
 
 h1 {
