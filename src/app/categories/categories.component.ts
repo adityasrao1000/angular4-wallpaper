@@ -3,12 +3,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'test-app',
-  templateUrl: './test.component.html',
-  styleUrls: ['./test.component.css', '../app.component.scss'],
+  templateUrl: './categories.component.html',
+  styleUrls: ['./categories.component.css', '../app.component.scss'],
 })
 
 
-export class TestComponent {
+export class CategoriesComponent {
 
   title = 'Categories';
   categories = [];

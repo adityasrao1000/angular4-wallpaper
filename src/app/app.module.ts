@@ -11,7 +11,6 @@ import { FeaturesComponent } from './features/features.component';
 import { VideoComponent, SafePipe } from './video/video.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { routes } from './app-routing.module';
-import { TestComponent } from './test/test.component';
 import { WallpapersComponent } from './wallpaper/wallpapers.component';
 import { Http1Component } from './http/http.component';
 import { ContactsComponent } from './contacts/contacts.component';
@@ -22,6 +21,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SearchPipe } from './navbar/search.pipe';
 import { FooterComponent } from './footer/footer.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   imports: [
@@ -41,7 +41,7 @@ import { FooterComponent } from './footer/footer.component';
     FeaturesComponent,
     VideoComponent,
     MainpageComponent,
-    TestComponent,
+    CategoriesComponent,
     WallpapersComponent,
     Http1Component,
     ContactsComponent,
