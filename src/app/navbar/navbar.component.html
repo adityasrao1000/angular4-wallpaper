@@ -29,14 +29,15 @@
 </nav>
 
 <div class="mobile-nav">
-  <ul>
-    <li>
+  <ul  class="display: flex">
+    <li style="width: 19%">
       <div class="container" (click)="show()" [ngClass]="{ change: visible }">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
       </div>
     </li>
+    <li style="width:81%"><input type="text" id="search-bar" class="form-control" placeholder=" search" [(ngModel)]="ser1" [ngModelOptions]="{standalone: true}"  autocomplete="off"></li>
   </ul>
   <ul class="list" [ngClass]="{ slide: visible }">
     <li>
@@ -60,7 +61,6 @@
       </b>
     </li>
   </ul>
-  <input type="text" id="search-bar" class="form-control" placeholder=" search" [(ngModel)]="ser1" [ngModelOptions]="{standalone: true}"  autocomplete="off">
 </div>
 <div class="dropdown-content two">
   <div *ngFor="let link of links | search: ser1">

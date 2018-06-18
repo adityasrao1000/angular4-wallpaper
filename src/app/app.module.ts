@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SearchPipe } from './navbar/search.pipe';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -46,7 +47,8 @@ import { SearchPipe } from './navbar/search.pipe';
     ContactsComponent,
     NotFoundComponent,
     SafePipe,
-    SearchPipe
+    SearchPipe,
+    FooterComponent
   ],
   providers: [
     HttpService
