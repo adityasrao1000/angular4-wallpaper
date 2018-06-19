@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'img-scroller',
   templateUrl: './image-scroller.component.html',
   styleUrls: ['./image-scroller.component.scss']

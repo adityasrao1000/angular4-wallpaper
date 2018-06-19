@@ -11,6 +11,7 @@ export class SafePipe implements PipeTransform {
 }
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'videos',
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.css']

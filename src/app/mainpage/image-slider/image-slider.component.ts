@@ -3,6 +3,7 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { map } from 'rxjs/operators';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'img-slider',
   templateUrl: './image-slider.component.html',
   styleUrls: ['./image-slider.component.scss'],
