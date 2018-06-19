@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'contacts',
   templateUrl: './contacts.component.html',
   styleUrls: ['./contacts.component.css']

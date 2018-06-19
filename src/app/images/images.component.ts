@@ -6,12 +6,12 @@ import { DOCUMENT } from '@angular/common';
 
 @Component({
   // tslint:disable-next-line:component-selector
-  selector: 'http',
-  templateUrl: './http.component.html',
-  styleUrls: ['./http.component.scss']
+  selector: 'images',
+  templateUrl: './images.component.html',
+  styleUrls: ['./images.component.scss']
 })
 
-export class Http1Component implements OnInit, OnDestroy {
+export class ImagesComponent implements OnInit, OnDestroy {
 
   private router: Router;
   id: string;

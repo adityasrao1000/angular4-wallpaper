@@ -8,10 +8,10 @@ import { ArticleComponent } from './article/article.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { routes } from './app-routing.module';
 import { WallpapersComponent } from './wallpaper/wallpapers.component';
-import { Http1Component } from './http/http.component';
+import { ImagesComponent } from './images/images.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { NotFoundComponent } from './pagenotfound/pagenotfound.component';
-import { HttpService } from './http/http.service';
+import { HttpService } from './images/http.service';
 import { HttpClientModule } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -43,7 +43,7 @@ import { FeaturesComponent } from './mainpage/features/features.component';
     MainpageComponent,
     CategoriesComponent,
     WallpapersComponent,
-    Http1Component,
+    ImagesComponent,
     ContactsComponent,
     NotFoundComponent,
     SafePipe,
