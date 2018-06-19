@@ -17,6 +17,8 @@ export class CategoriesComponent {
     { title: 'Charlotte', url: '/categories/charlotte', img: './assets/img/charlotte.jpg' },
     { title: 'Code Geass', url: '/categories/codegeass', img: './assets/img/codegeass.jpg' },
     { title: 'deathnote', url: '/categories/deathnote', img: './assets/img/deathnote.jpg' },
+    { title: 'black jack', url: '/categories/blackjack', img: './assets/img/blackjack.jpg' },
+    { title: 'bleach', url: '/categories/bleach', img: './assets/img/bleach.jpg' },
     { title: 'durarara', url: '/categories/durarara', img: './assets/img/durarara.jpg' },
     { title: 'naruto', url: '/categories/naruto', img: './assets/img/naruto.jpg' },
     { title: 'onepiece', url: '/categories/onepiece', img: './assets/img/onepiece.png' },
@@ -28,7 +30,7 @@ export class CategoriesComponent {
     { title: '.hack', url: '/categories/hack', img: './assets/img/hack.jpg' },
     { title: 'inuyasha', url: '/categories/inuyasha', img: './assets/img/inuyasha.jpg' },
     { title: 'trigun', url: '/categories/trigun', img: './assets/img/trigun.jpg' },
-    { title: 'noragami', url: '/categories/noragami', img: './assets/img/noragami.jpg' },
+    { title: 'aria', url: '/categories/aria', img: './assets/img/aria.jpg' },
     { title: 'vampire knight', url: '/categories/vampireknight', img: './assets/img/vampireknight.png' }
   ];
 
