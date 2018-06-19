@@ -1,6 +1,6 @@
 #wallpaper {
   width: 740px;
-  height: 380px;
+  height: auto;
   margin: auto;
   border: 5px solid #232323;
   border-radius: 2px;
@@ -23,6 +23,13 @@
 .thumbnail {
   background-color: #302f2f;
   border: none;
+  width: 70%;
+  margin: auto;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 16px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 4px 16px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 4px 16px -2px rgba(0, 0, 0, 0.75);
+  margin-top: 10px;
 }
 
 .animate {

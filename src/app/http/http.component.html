@@ -1,20 +1,28 @@
-<br>
-<div [style.display]="display">
-  <img src="{{imglink}}" alt="wallpaper" [ngClass]="['img-responsive', 'animate']" id="wallpaper">
+<div class="container-fluid">
+  <br>
+  <div [style.display]="display">
+    <img src="{{imglink}}" alt="wallpaper" [ngClass]="['img-responsive', 'animate']" id="wallpaper">
 
-  <a href="{{imglink}}" download>
-    <button type="button" class="btn btn-default">Download Max Resolution</button>
-  </a>
-</div>
+    <a href="{{imglink}}" download>
+      <button type="button" class="btn btn-default">Download Max Resolution</button>
+    </a>
+  </div>
 
-<br>
-<hr>
-<p style="text-align:center; color:grey">Click on the image to view</p>
-<br>
-<div id="style-1">
-  <ul type="none">
-    <li *ngFor="let book of books">
-      <img class="img-responsive thumbnail" height="200px" width="350px" src="{{book.src}}" alt="image" (click)="show(book.src)">
-    </li>
-  </ul>
+  <br>
+  <hr>
+  <p style="text-align:center; color:grey">Click on the image to view</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-3">
+
+    </div>
+    <div class="col-sm-6">
+      <div *ngFor="let paper of wallpaper">
+        <img class="img-responsive thumbnail" src="{{paper.src}}" alt="image" (click)="show(paper.src)">
+      </div>
+    </div>
+    <div class="col-sm-3">
+
+    </div>
+  </div>
 </div>

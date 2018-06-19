@@ -5,9 +5,10 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'http',
   templateUrl: './http.component.html',
-  styleUrls: ['../scrollbar.css', './http.component.scss']
+  styleUrls: ['./http.component.scss']
 })
 
 export class Http1Component implements OnInit, OnDestroy {
@@ -15,8 +16,7 @@ export class Http1Component implements OnInit, OnDestroy {
   private router: Router;
   id: string;
   private sub: any;
-  observableBooks: Wallpaper[] = [];
-  books: Wallpaper[] = [];
+  wallpaper: Wallpaper[] = [];
   errorMessage: string;
   src: string;
   imglink: string;
@@ -27,7 +27,7 @@ export class Http1Component implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
       this.bookService.getBooksWithObservable(params['id'])
-        .then(result => this.books = result, error => console.log(error));
+        .then(result => this.wallpaper = result, error => console.log(error));
     });
   }
 

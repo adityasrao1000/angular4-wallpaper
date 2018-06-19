@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'test-app',
   templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.css', '../app.component.scss'],

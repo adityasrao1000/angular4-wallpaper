@@ -3,7 +3,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { Injectable } from '@angular/core';
 
 @Component({
-  selector: 'wallpaper',
   templateUrl: './wallpaper.component.html',
   styleUrls: ['./wallpaper.component.css']
 })
