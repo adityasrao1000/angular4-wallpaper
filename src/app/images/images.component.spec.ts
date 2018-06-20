@@ -2,19 +2,31 @@ import { TestBed, ComponentFixture, inject, async } from '@angular/core/testing'
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ImagesComponent } from './images.component';
 import { HttpService } from './http.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ActivatedRouteStub } from '../activated-router-stub';
+import { Router, ActivatedRoute } from '@angular/router';
 
-describe('Component: HttpComponent', () => {
+describe('Component: ImagesComponent', () => {
 
     let component: ImagesComponent;
     let fixture: ComponentFixture<ImagesComponent>;
+    let activatedRoute: ActivatedRouteStub;
 
     beforeEach(() => {
-
+        // assign activated route and set parameters
+        activatedRoute = new ActivatedRouteStub();
+        activatedRoute.setParamMap({ id: 'abcdef' });
         // refine the test module by declaring the test component
         TestBed.configureTestingModule({
+            imports: [HttpClientModule],
             declarations: [ImagesComponent],
             schemas: [NO_ERRORS_SCHEMA],
-            providers: [HttpService]
+            providers: [HttpService,
+                {
+                    provide: Router,
+                    useClass: class { navigate = jasmine.createSpy('navigate'); }
+                },
+                { provide: ActivatedRoute, useValue: { paramMap: activatedRoute.paramMap } }]
         });
 
         // create component and test fixture
