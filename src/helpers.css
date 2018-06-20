@@ -1,0 +1,42 @@
+.title-bar {
+  height: 4px;
+  width: 40px;
+  margin: auto !important;
+  margin-top: 7px !important;
+}
+
+.pink {
+  background-color: #E91E63;
+}
+
+.blue {
+  background-color: #2196F3;
+}
+
+.red {
+  background-color: #f44336;
+}
+
+.teal {
+  background-color: #009688;
+}
+
+.green {
+  background-color: #4CAF50;
+}
+
+.amber {
+  background-color: #FFC107;
+}
+
+.orange {
+  background-color: #FF9800;
+}
+
+.yellow {
+  background-color: #FFEB3B;
+}
+
+.purple {
+  background-color: #9C27B0;
+}

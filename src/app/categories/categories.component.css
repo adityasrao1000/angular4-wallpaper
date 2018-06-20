@@ -1,6 +1,7 @@
-.container-fluid{
+.container-fluid {
   padding: 2%;
 }
+
 .img-responsive {
   border: 5px solid #232323;
   cursor: pointer;
@@ -18,14 +19,6 @@
   color: #2962ff !important;
   float: right;
   cursor: pointer;
-}
-
-.bar {
-  height: 4px;
-  width: 40px;
-  margin: auto;
-  background-color: lightgreen;
-  margin-top: 7px;
 }
 
 .container-fluid {
