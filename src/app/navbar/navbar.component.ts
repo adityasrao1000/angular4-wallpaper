@@ -10,6 +10,8 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
   links: string[] = ['home', 'categories', 'contacts', 'latest'];
   visible = false;
+  ser = '';
+  ser1 = '';
 
   show() {
     this.visible = !this.visible;
