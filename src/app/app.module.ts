@@ -11,7 +11,7 @@ import { WallpapersComponent } from './wallpaper/wallpapers.component';
 import { ImagesComponent } from './images/images.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { NotFoundComponent } from './pagenotfound/pagenotfound.component';
-import { HttpService } from './images/http.service';
+import { ImageService } from './images/image.service';
 import { HttpClientModule } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -51,7 +51,7 @@ import { FeaturesComponent } from './mainpage/features/features.component';
     FooterComponent
   ],
   providers: [
-    HttpService
+    ImageService
   ],
   exports: [RouterModule],
   bootstrap: [AppComponent]

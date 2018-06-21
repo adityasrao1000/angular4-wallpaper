@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Wallpaper } from '../wallpaper/wallpaper';
 
 @Injectable()
-export class HttpService {
+export class ImageService {
 
 
     constructor(private http: HttpClient) { }

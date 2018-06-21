@@ -1,7 +1,7 @@
 import { TestBed, ComponentFixture, inject, async } from '@angular/core/testing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { ImagesComponent } from './images.component';
-import { HttpService } from './http.service';
+import { ImageService } from './image.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ActivatedRouteStub } from '../activated-router-stub';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -21,7 +21,7 @@ describe('Component: ImagesComponent', () => {
             imports: [HttpClientModule],
             declarations: [ImagesComponent],
             schemas: [NO_ERRORS_SCHEMA],
-            providers: [HttpService,
+            providers: [ImageService,
                 {
                     provide: Router,
                     useClass: class { navigate = jasmine.createSpy('navigate'); }

@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject, OnDestroy } from '@angular/core';
 import { Wallpaper } from '../wallpaper/wallpaper';
-import { HttpService } from './http.service';
+import { ImageService } from './image.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DOCUMENT } from '@angular/common';
 
@@ -22,7 +22,7 @@ export class ImagesComponent implements OnInit, OnDestroy {
   imglink: string;
   display = 'none';
 
-  constructor(private bookService: HttpService, private route: ActivatedRoute, @Inject(DOCUMENT) private document: Document) { }
+  constructor(private bookService: ImageService, private route: ActivatedRoute, @Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
