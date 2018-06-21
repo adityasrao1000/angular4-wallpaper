@@ -26,4 +26,16 @@ describe('Component: SearchPipe', () => {
     it('should return filtered result', () => {
         expect(pipe.transform(['a', 'b', 'c', 'ab'], 'a')).toEqual(['a', 'ab']);
     });
+
+    it('should be case insensitive', () => {
+        expect(pipe.transform(['a', 'b', 'c', 'ab'], 'A')).toEqual(['a', 'ab']);
+    });
+
+    it('should return [] for undefined search term', () => {
+        expect(pipe.transform(['a', 'b', 'c', 'ab'], undefined)).toEqual([]);
+    });
+
+    it('should return [] for null search term', () => {
+        expect(pipe.transform(['a', 'b', 'c', 'ab'], null)).toEqual([]);
+    });
 });

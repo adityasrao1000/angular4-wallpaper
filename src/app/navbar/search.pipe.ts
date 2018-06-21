@@ -11,6 +11,6 @@ export class SearchPipe implements PipeTransform {
         }
         // filter items array, items which match and return true will be
         // kept, false will be filtered out
-        return items.filter(item => item.indexOf(filter) !== -1);
+        return items.filter(item => item.toLocaleLowerCase().indexOf(filter.toLocaleLowerCase()) !== -1);
     }
 }
