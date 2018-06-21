@@ -39,4 +39,12 @@ describe('Component: ImagesComponent', () => {
     it('should create component', () => {
         expect(component).toBeTruthy();
     });
+    it('ngoninit should be truthy', () => {
+        fixture.whenStable().then(() => {
+            expect(component.ngOnInit()).toBeTruthy();
+        });
+    });
+    it('function should be undefined', () => {
+        expect(component.show('https://img.jpg')).toBeUndefined();
+    });
 });

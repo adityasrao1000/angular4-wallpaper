@@ -35,4 +35,14 @@ describe('Component: WallpaperComponent', () => {
     it('should create component', () => {
         expect(component).toBeTruthy();
     });
+    it('ngoninit should be truthy', () => {
+        fixture.whenStable().then(() => {
+            expect(component.ngOnInit()).toBeTruthy();
+        });
+    });
+    it('ngondestroy should be truthy', () => {
+        fixture.whenStable().then(() => {
+            expect(component.ngOnDestroy()).toBeTruthy();
+        });
+    });
 });

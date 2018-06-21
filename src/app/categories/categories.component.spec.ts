@@ -25,4 +25,10 @@ describe('Component: CategoriesComponent', () => {
     it('should create component', () => {
         expect(component).toBeTruthy();
     });
+
+    it('function should be undefined', () => {
+        fixture.whenStable().then(() => {
+            expect(component.onScroll()).toBeUndefined();
+        });
+    });
 });
