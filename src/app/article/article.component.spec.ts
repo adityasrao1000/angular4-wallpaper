@@ -25,4 +25,10 @@ describe('Component: ArticleComponent', () => {
     it('should create component', () => {
         expect(component).toBeTruthy();
     });
+
+    it('color should be black', () => {
+        component.over();
+        fixture.detectChanges();
+        expect(component.color).toBe('black');
+    });
 });
