@@ -6,7 +6,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { SearchPipe } from './navbar/search.pipe';
 
-describe('AppComponent', () => {
+describe('Component: AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [

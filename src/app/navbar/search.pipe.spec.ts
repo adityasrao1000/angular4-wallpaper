@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { SearchPipe } from './search.pipe';
 
-describe('Component: SearchPipe', () => {
+describe('Pipe: SearchPipe', () => {
 
     let pipe: SearchPipe;
 
