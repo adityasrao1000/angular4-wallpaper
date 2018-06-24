@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 
 export class ModalComponent {
   show: boolean;
+  @Input() title;
 
   constructor() {
     this.show = false;

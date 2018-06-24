@@ -28,7 +28,7 @@
     </form>
     <ul class="nav">
       <li>
-          <button class="btn main-login" (click)="open()">Login</button>
+        <button class="btn main-login" (click)="open()">Login</button>
       </li>
     </ul>
   </div>
@@ -76,4 +76,12 @@
     <a [routerLink]="[link]">{{link}}</a>
   </div>
 </div>
-<app-modal></app-modal>
+<app-modal [title]="'Sign In'">
+  <a class="btn btn-block btn-social btn-facebook">
+    <span class="fa fa-facebook"></span> Sign in with facebook
+  </a>
+  <h4 style="color: grey; text-align: center">Or</h4>
+  <a class="btn btn-block btn-social btn-google">
+    <span class="fa fa-google"></span> Sign in with google
+  </a>
+</app-modal>
