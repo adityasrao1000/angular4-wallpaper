@@ -22,6 +22,7 @@ import { ImageSliderComponent } from './mainpage/image-slider/image-slider.compo
 import { ImgScrollerComponent } from './mainpage/image-scroller/image-scroller.component';
 import { VideoComponent, SafePipe } from './mainpage/video/video.component';
 import { FeaturesComponent } from './mainpage/features/features.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   imports: [
@@ -48,7 +49,8 @@ import { FeaturesComponent } from './mainpage/features/features.component';
     NotFoundComponent,
     SafePipe,
     SearchPipe,
-    FooterComponent
+    FooterComponent,
+    ModalComponent
   ],
   providers: [
     ImageService

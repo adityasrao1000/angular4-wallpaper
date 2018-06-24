@@ -16,7 +16,8 @@
     </ul>
     <form class="navbar-form">
       <div class="input-group">
-        <input type="text" class="form-control" id="nav-search" [(ngModel)]="ser" [ngModelOptions]="{standalone: true}" placeholder=" Search" autocomplete="off">
+        <input type="text" class="form-control" id="nav-search" [(ngModel)]="ser" [ngModelOptions]="{standalone: true}" placeholder=" Search"
+          autocomplete="off">
         <div class="dropdown-content">
           <div *ngFor="let link of links  | search: ser">
             <a class="link" [routerLink]="[link]">{{link}}</a>
@@ -25,11 +26,16 @@
 
       </div>
     </form>
+    <ul class="nav">
+      <li>
+          <button class="btn main-login" (click)="open()">Login</button>
+      </li>
+    </ul>
   </div>
 </nav>
 
 <div class="mobile-nav">
-  <ul  class="display: flex">
+  <ul class="display: flex">
     <li style="width: 19%">
       <div class="container" (click)="show()" [ngClass]="{ change: visible }">
         <div class="bar1"></div>
@@ -37,7 +43,10 @@
         <div class="bar3"></div>
       </div>
     </li>
-    <li style="width:81%"><input type="text" id="search-bar" class="form-control" placeholder=" search" [(ngModel)]="ser1" [ngModelOptions]="{standalone: true}"  autocomplete="off"></li>
+    <li style="width:81%">
+      <input type="text" id="search-bar" class="form-control" placeholder=" search" [(ngModel)]="ser1" [ngModelOptions]="{standalone: true}"
+        autocomplete="off">
+    </li>
   </ul>
   <ul class="list" [ngClass]="{ slide: visible }">
     <li>
@@ -67,3 +76,4 @@
     <a [routerLink]="[link]">{{link}}</a>
   </div>
 </div>
+<app-modal></app-modal>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -8,6 +9,8 @@ import { Component } from '@angular/core';
 })
 
 export class NavbarComponent {
+  @ViewChild(ModalComponent) modal: ModalComponent;
+
   links: string[] = ['home', 'categories', 'contacts', 'latest'];
   visible = false;
   ser = '';
@@ -15,5 +18,9 @@ export class NavbarComponent {
 
   show() {
     this.visible = !this.visible;
+  }
+
+  open(): void {
+  this.modal.show = true;
   }
 }
