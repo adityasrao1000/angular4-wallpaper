@@ -4,6 +4,7 @@ import { WallpapersComponent } from './wallpaper/wallpapers.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { NotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { RegisterComponent } from './register/register.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -11,6 +12,7 @@ export const routes: Routes = [
   { path: 'categories', component: CategoriesComponent },
   { path: 'categories/:id', component: WallpapersComponent },
   { path: 'contacts', component: ContactsComponent },
+  { path: 'register', component: RegisterComponent },
   { component: NotFoundComponent, path: '**' }
 ];
 

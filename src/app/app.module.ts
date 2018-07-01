@@ -23,6 +23,7 @@ import { ImgScrollerComponent } from './mainpage/image-scroller/image-scroller.c
 import { VideoComponent, SafePipe } from './mainpage/video/video.component';
 import { FeaturesComponent } from './mainpage/features/features.component';
 import { ModalComponent } from './modal/modal.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   imports: [
@@ -50,7 +51,8 @@ import { ModalComponent } from './modal/modal.component';
     SafePipe,
     SearchPipe,
     FooterComponent,
-    ModalComponent
+    ModalComponent,
+    RegisterComponent
   ],
   providers: [
     ImageService
