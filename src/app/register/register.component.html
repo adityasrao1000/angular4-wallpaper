@@ -1,0 +1,62 @@
+<div class="container-fluid">
+  <div class="col-sm-3">
+
+  </div>
+  <div class="col-sm-6">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+      <form (ngSubmit)="onSubmit(myform1)" [formGroup]="myform1" *ngIf="i === 0">
+        <div class="form-group">
+          <label for="usr">Name:</label>
+          <input type="text" class="form-control" placeholder="Enter your name" formControlName="name">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Email:</label>
+          <input type="email" class="form-control" placeholder="Enter your email" formControlName="email">
+        </div>
+        <button type="submit" class="btn green" style="color:white">&nbsp; Next &nbsp;</button>
+      </form>
+      <form (ngSubmit)="onSubmit(myform2)" [formGroup]="myform2"  *ngIf="i === 1">
+        <div class="form-group">
+          <label for="usr">Username:</label>
+          <input type="text" class="form-control" placeholder="Enter your name" formControlName="username">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Gender:</label>
+          <input type="email" class="form-control" placeholder="Enter your email" formControlName="gender">
+        </div>
+        <button type="submit" class="btn green" style="color:white">&nbsp; Next &nbsp;</button>
+      </form>
+      <form (ngSubmit)="onSubmit(myform3)" [formGroup]="myform3"  *ngIf="i === 2">
+        <div class="form-group">
+          <label for="usr">Password:</label>
+          <input type="text" class="form-control" placeholder="Enter your name" formControlName="password">
+        </div>
+        <div class="form-group">
+          <label for="pwd">Re-enter password:</label>
+          <input type="email" class="form-control" placeholder="Enter your email" formControlName="reenterpassword">
+        </div>
+        <button type="submit" class="btn green" style="color:white">&nbsp; Submit &nbsp;</button>
+      </form>
+    </div>
+    <div style="text-align:center;margin-top:60px;">
+      <span [ngClass]="{'step': true, 'active': i > 0}"></span>
+      <span [ngClass]="{'step': true, 'active': i > 1}"></span>
+      <span [ngClass]="{'step': true, 'active': i > 2}"></span>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+  <div class="col-sm-3">
+
+  </div>
+</div>
