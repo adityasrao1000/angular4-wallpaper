@@ -32,6 +32,7 @@ import { RegisterComponent } from './register/register.component';
     InfiniteScrollModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
+    FormsModule,
     NgbModule
   ],
   declarations: [
