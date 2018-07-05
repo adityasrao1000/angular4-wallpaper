@@ -7,7 +7,7 @@ export class ImageService {
 
 
     constructor(private http: HttpClient) { }
-    getBooksWithObservable(id): Promise<Wallpaper[]> {
+    getImagesWithObservable(id): Promise<Wallpaper[]> {
         return this.http.get<any>(`./assets/${id}.json`)
             .toPromise();
     }

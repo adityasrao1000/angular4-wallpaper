@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 })
 
 
-export class CategoriesComponent {
+export class CategoriesComponent implements OnInit {
 
   title = 'Categories';
   categories = [];
@@ -35,7 +35,7 @@ export class CategoriesComponent {
     { title: 'vampire knight', url: '/categories/vampireknight', img: './assets/img/vampireknight.png' }
   ];
 
-  constructor() {
+  ngOnInit() {
     for (this.index = 0; this.index < 5; this.index++) {
       this.categories.push(this.allcategories[this.index]);
     }

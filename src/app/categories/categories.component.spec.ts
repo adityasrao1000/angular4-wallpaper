@@ -25,10 +25,19 @@ describe('Component: CategoriesComponent', () => {
     it('should create component', () => {
         expect(component).toBeTruthy();
     });
-
+    it('ngOnInit should be undefined', () => {
+        fixture.whenStable().then(() => {
+            expect(component.ngOnInit()).toBeUndefined();
+        });
+    });
     it('function should be undefined', () => {
         fixture.whenStable().then(() => {
             expect(component.onScroll()).toBeUndefined();
         });
+    });
+    it('index = 4', () => {
+            component.index = component.allcategories.length;
+            component.onScroll();
+            expect(component.index ).toEqual(4);
     });
 });

@@ -25,4 +25,8 @@ describe('Component: ContactsComponent', () => {
     it('should create component', () => {
         expect(component).toBeTruthy();
     });
+
+    it('onSubmit should be undefined', async(() => {
+        expect(component.onSubmit()).toBeUndefined();
+      }));
 });
