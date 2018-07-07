@@ -12,7 +12,7 @@ import { ImagesComponent } from './images/images.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { NotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { ImageService } from './images/image.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SearchPipe } from './navbar/search.pipe';
@@ -24,6 +24,7 @@ import { VideoComponent, SafePipe } from './mainpage/video/video.component';
 import { FeaturesComponent } from './mainpage/features/features.component';
 import { ModalComponent } from './modal/modal.component';
 import { RegisterComponent } from './register/register.component';
+import { TokenInterceptor } from './utils/token-interceptor.service';
 
 @NgModule({
   imports: [
@@ -57,7 +58,8 @@ import { RegisterComponent } from './register/register.component';
     RegisterComponent
   ],
   providers: [
-    ImageService
+    ImageService,
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],
   exports: [RouterModule],
   bootstrap: [AppComponent]

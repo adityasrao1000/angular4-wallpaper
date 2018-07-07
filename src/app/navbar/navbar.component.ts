@@ -15,6 +15,7 @@ export class NavbarComponent {
   visible = false;
   ser = '';
   ser1 = '';
+    ModalComponent: any;
 
   show() {
     this.visible = !this.visible;
