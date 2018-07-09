@@ -29,10 +29,10 @@ import {
   SocialLoginModule,
   AuthServiceConfig,
   GoogleLoginProvider,
-  FacebookLoginProvider,
-  LinkedinLoginProvider
+ // FacebookLoginProvider
 } from 'ng4-social-login';
 import { ValidateOauthService } from './utils/validate-oauth.service';
+import { ProfileComponent } from './profile/profile.component';
 
 const CONFIG = new AuthServiceConfig([
   {
@@ -75,7 +75,8 @@ export function provideConfig() {
     SearchPipe,
     FooterComponent,
     ModalComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProfileComponent
   ],
   providers: [
     {
