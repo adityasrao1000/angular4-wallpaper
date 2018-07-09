@@ -16,7 +16,7 @@
     </ul>
     <form class="navbar-form">
       <div class="input-group">
-        <input type="text" class="form-control" id="nav-search" [(ngModel)]="ser" [ngModelOptions]="{standalone: true}" placeholder=" Search"
+        <input type="text" class="form-control" id="nav-search" (blur)="closeSearch()" [(ngModel)]="ser" [ngModelOptions]="{standalone: true}" placeholder=" Search"
           autocomplete="off">
         <div class="dropdown-content">
           <div *ngFor="let link of links  | search: ser">
@@ -45,7 +45,7 @@
       </div>
     </li>
     <li style="width:81%">
-      <input type="text" id="search-bar" class="form-control" placeholder=" search" [(ngModel)]="ser1" [ngModelOptions]="{standalone: true}"
+      <input type="text" id="search-bar" class="form-control" (blur)="closeSearch()" placeholder=" search" [(ngModel)]="ser1" [ngModelOptions]="{standalone: true}"
         autocomplete="off">
     </li>
   </ul>
@@ -82,7 +82,7 @@
     <span class="fa fa-facebook"></span> Sign in with facebook
   </a>
   <h4 style="color: grey; text-align: center">Or</h4>
-  <a class="btn btn-block btn-social btn-google">
+  <a class="btn btn-block btn-social btn-google" (click)="signInWithGoogle()">
     <span class="fa fa-google"></span> Sign in with google
   </a>
 </app-modal>

@@ -25,6 +25,25 @@ import { FeaturesComponent } from './mainpage/features/features.component';
 import { ModalComponent } from './modal/modal.component';
 import { RegisterComponent } from './register/register.component';
 import { TokenInterceptor } from './utils/token-interceptor.service';
+import {
+  SocialLoginModule,
+  AuthServiceConfig,
+  GoogleLoginProvider,
+  FacebookLoginProvider,
+  LinkedinLoginProvider
+} from 'ng4-social-login';
+import { ValidateOauthService } from './utils/validate-oauth.service';
+
+const CONFIG = new AuthServiceConfig([
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider('335091079574-vtlsr39j241l0tpn5rvmmvp2dksanhbs.apps.googleusercontent.com')
+  }
+], false);
+
+export function provideConfig() {
+  return CONFIG;
+}
 
 @NgModule({
   imports: [
@@ -35,6 +54,7 @@ import { TokenInterceptor } from './utils/token-interceptor.service';
     RouterModule.forRoot(routes),
     HttpClientModule,
     FormsModule,
+    SocialLoginModule,
     NgbModule
   ],
   declarations: [
@@ -58,6 +78,11 @@ import { TokenInterceptor } from './utils/token-interceptor.service';
     RegisterComponent
   ],
   providers: [
+    {
+      provide: AuthServiceConfig,
+      useFactory: provideConfig
+    },
+    ValidateOauthService,
     ImageService,
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],

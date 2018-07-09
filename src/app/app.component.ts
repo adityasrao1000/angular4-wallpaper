@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { GoogleLoginProvider, SocialUser, AuthService } from 'ng4-social-login';
+import { ValidateOauthService } from './utils/validate-oauth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +9,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-
 }
 
