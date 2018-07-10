@@ -22,11 +22,11 @@ export class ImagesComponent implements OnInit, OnDestroy {
   imglink: string;
   display = 'none';
 
-  constructor(private bookService: ImageService, private route: ActivatedRoute, @Inject(DOCUMENT) private document: Document) { }
+  constructor(private imageService: ImageService, private route: ActivatedRoute, @Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
     this.sub = this.route.params.subscribe(params => {
-      this.bookService.getImagesWithObservable(params['id'])
+      this.imageService.getImagesWithObservable(params['id'])
         .then(result => this.wallpaper = result, error => console.log(error));
     });
   }
