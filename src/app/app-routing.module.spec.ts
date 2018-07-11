@@ -15,6 +15,7 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SocialLoginModule } from 'ng4-social-login';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UserCredentialsService } from './utils/user-credentials.service';
 
 describe('Router: App', () => {
 
@@ -40,6 +41,7 @@ describe('Router: App', () => {
                 ProfileComponent,
                 AppComponent
             ],
+            providers: [UserCredentialsService],
             schemas: [NO_ERRORS_SCHEMA]
         });
 

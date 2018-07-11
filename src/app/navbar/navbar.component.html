@@ -28,10 +28,10 @@
     </form>
     <ul class="nav">
       <li>
-        <button class="btn main-login" (click)="open()" *ngIf="!loggedIn">Login</button>&nbsp;
-        <button class="btn main-login" [routerLink]="['register']"  *ngIf="!loggedIn">Register</button>
-        <button class="btn main-login" *ngIf="loggedIn" ><img [src]="user.photoUrl" height="20" width="20"> profile</button>&nbsp;
-        <button class="btn main-login" *ngIf="loggedIn" (click)="logout()">Logout</button>
+        <button class="btn main-login" (click)="open()" *ngIf="!loginCredentials.loggedIn">Login</button>&nbsp;
+        <button class="btn main-login" [routerLink]="['register']"  *ngIf="!loginCredentials.loggedIn">Register</button>
+        <button class="btn main-login" *ngIf="loginCredentials.loggedIn" routerLink="/profile"><img [src]="loginCredentials.user.photoUrl" style="border-radius: 50%" height="20" width="20">&nbsp; profile</button>&nbsp;
+        <button class="btn main-login" *ngIf="loginCredentials.loggedIn" (click)="logout()">Logout</button>
       </li>
     </ul>
   </div>
@@ -79,12 +79,12 @@
     <a [routerLink]="[link]">{{link}}</a>
   </div>
 </div>
-<app-modal [title]="'Sign In'" *ngIf="!loggedIn">
+<app-modal [title]="'Sign In'" *ngIf="!loginCredentials.loggedIn">
   <a class="btn btn-block btn-social btn-facebook">
     <span class="fa fa-facebook"></span> Sign in with facebook
   </a>
   <h4 style="color: grey; text-align: center">Or</h4>
-  <a class="btn btn-block btn-social btn-google" (click)="signInWithGoogle()">
+  <a class="btn btn-block btn-social btn-google" (click)="loginCredentials.signInWithGoogle()">
     <span class="fa fa-google"></span> Sign in with google
   </a>
 </app-modal>

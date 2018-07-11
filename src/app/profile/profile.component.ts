@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserCredentialsService } from '../utils/user-credentials.service';
 
 @Component({
   templateUrl: './profile.component.html',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 
 export class ProfileComponent {
 
+  constructor(public loginCredentials: UserCredentialsService) { }
 }

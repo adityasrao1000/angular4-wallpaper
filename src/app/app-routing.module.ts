@@ -6,6 +6,7 @@ import { NotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UserCredentialsService } from './utils/user-credentials.service';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,7 +15,7 @@ export const routes: Routes = [
   { path: 'categories/:id', component: WallpapersComponent },
   { path: 'contacts', component: ContactsComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile', component: ProfileComponent, canActivate: [UserCredentialsService] },
   { component: NotFoundComponent, path: '**' }
 ];
 

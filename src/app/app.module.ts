@@ -29,10 +29,11 @@ import {
   SocialLoginModule,
   AuthServiceConfig,
   GoogleLoginProvider,
- // FacebookLoginProvider
+  // FacebookLoginProvider
 } from 'ng4-social-login';
 import { ValidateOauthService } from './utils/validate-oauth.service';
 import { ProfileComponent } from './profile/profile.component';
+import { UserCredentialsService } from './utils/user-credentials.service';
 
 const CONFIG = new AuthServiceConfig([
   {
@@ -84,6 +85,7 @@ export function provideConfig() {
     },
     ValidateOauthService,
     ImageService,
+    UserCredentialsService,
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],
   exports: [RouterModule],

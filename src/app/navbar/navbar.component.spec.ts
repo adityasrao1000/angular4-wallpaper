@@ -91,7 +91,6 @@ describe('Component: NavbarComponent', () => {
 
     it('signInWithGoogle should be called', () => {
         fixture.whenStable().then(() => {
-            window.localStorage.setItem('token', JSON.stringify({ type: 'google', token: 'asadfgg' }));
             expect(component.signInWithGoogle()).toHaveBeenCalled();
         });
     });
