@@ -1,0 +1,11 @@
+.nav-pills {
+  background: #232323;
+  color: grey;
+  &:hover {
+      cursor: pointer;
+  }
+}
+
+.nav-pills .active {
+  background: black;
+}

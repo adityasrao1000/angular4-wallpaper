@@ -10,6 +10,7 @@ import { ValidateOauthService } from './utils/validate-oauth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ActivatedRouteStub } from './activated-router-stub';
 import { Router, ActivatedRoute } from '@angular/router';
+import { UserCredentialsService } from './utils/user-credentials.service';
 
 const CONFIG = new AuthServiceConfig([
   {
@@ -49,7 +50,8 @@ describe('Component: AppComponent', () => {
           useClass: class { navigate = jasmine.createSpy('navigate'); }
         },
         { provide: ActivatedRoute, useValue: { paramMap: activatedRoute.paramMap } },
-        ValidateOauthService],
+        ValidateOauthService,
+        UserCredentialsService],
       schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));

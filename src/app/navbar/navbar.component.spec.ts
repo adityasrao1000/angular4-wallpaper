@@ -8,6 +8,7 @@ import { ValidateOauthService } from '../utils/validate-oauth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ActivatedRouteStub } from '../activated-router-stub';
 import { Router, ActivatedRoute } from '@angular/router';
+import { UserCredentialsService } from '../utils/user-credentials.service';
 
 const CONFIG = new AuthServiceConfig([
     {
@@ -43,7 +44,8 @@ describe('Component: NavbarComponent', () => {
                     provide: AuthServiceConfig,
                     useFactory: provideConfig
                 },
-                ValidateOauthService],
+                ValidateOauthService,
+                UserCredentialsService],
             schemas: [NO_ERRORS_SCHEMA]
         });
 
@@ -59,17 +61,7 @@ describe('Component: NavbarComponent', () => {
     it('should create component', () => {
         expect(component).toBeTruthy();
     });
-    it('ngoninit should be called', () => {
-        fixture.whenStable().then(() => {
-            expect(component.ngOnInit()).toHaveBeenCalled();
-        });
-    });
-    it('ngAfterViewInit should be called', () => {
-        fixture.whenStable().then(() => {
-            window.localStorage.setItem('token', JSON.stringify({ type: 'google', token: 'asadfgg' }));
-            expect(component.ngAfterViewInit()).toHaveBeenCalled();
-        });
-    });
+
     it('visible should be true', () => {
         component.show();
         expect(component.visible).toBe(true);
@@ -86,12 +78,6 @@ describe('Component: NavbarComponent', () => {
         fixture.whenStable().then(() => {
             window.localStorage.setItem('token', JSON.stringify({ type: 'google', token: 'asadfgg' }));
             expect(component.logout()).toHaveBeenCalled();
-        });
-    });
-
-    it('signInWithGoogle should be called', () => {
-        fixture.whenStable().then(() => {
-            expect(component.signInWithGoogle()).toHaveBeenCalled();
         });
     });
 });

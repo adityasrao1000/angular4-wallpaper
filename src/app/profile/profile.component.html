@@ -1,7 +1,25 @@
 <div class="container-fluid">
+  <br>
+  <div class="container">
+  <div>
+    <img [src]="loginCredentials.user.photoUrl" class="img-thumbnail" alt="Cinque Terre">
+    <h3>{{loginCredentials.user.name}}</h3>
+  </div>
+    <ul class="nav nav-pills nav-justified">
+      <li class="nav-item">
+        <a class="nav-link">Info</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Images</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Analytics</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">connections</a>
+      </li>
+    </ul>
     <br>
-    <div>
-        <img [src]="loginCredentials.user.photoUrl" class="img-thumbnail" alt="Cinque Terre">
-        <h3>{{loginCredentials.user.name}}</h3>
-    </div>
+    <router-outlet></router-outlet>
+  </div>
 </div>
