@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ArticleComponent } from './article/article.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
-import { routes } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { WallpapersComponent } from './wallpaper/wallpapers.component';
 import { ImagesComponent } from './images/images.component';
 import { ContactsComponent } from './contacts/contacts.component';
@@ -32,9 +31,7 @@ import {
   // FacebookLoginProvider
 } from 'ng4-social-login';
 import { ValidateOauthService } from './utils/validate-oauth.service';
-import { ProfileComponent } from './profile/profile.component';
 import { UserCredentialsService } from './utils/user-credentials.service';
-import { InfoComponent } from './profile/info/info.component';
 
 const CONFIG = new AuthServiceConfig([
   {
@@ -53,7 +50,7 @@ export function provideConfig() {
     FormsModule,
     ReactiveFormsModule,
     InfiniteScrollModule,
-    RouterModule.forRoot(routes),
+    AppRoutingModule,
     HttpClientModule,
     SocialLoginModule,
     NgbModule
@@ -76,9 +73,7 @@ export function provideConfig() {
     SearchPipe,
     FooterComponent,
     ModalComponent,
-    RegisterComponent,
-    ProfileComponent,
-    InfoComponent
+    RegisterComponent
   ],
   providers: [
     {
@@ -90,7 +85,6 @@ export function provideConfig() {
     UserCredentialsService,
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],
-  exports: [RouterModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

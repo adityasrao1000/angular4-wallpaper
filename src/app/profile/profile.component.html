@@ -1,19 +1,23 @@
 <div class="container-fluid">
   <br>
   <div class="container">
-  <div>
-    <img [src]="loginCredentials.user.photoUrl" class="img-thumbnail" alt="Cinque Terre">
-    <h3>{{loginCredentials.user.name}}</h3>
-  </div>
+    <div>
+      <img [src]="loginCredentials.user.photoUrl" class="img-thumbnail" alt="Cinque Terre">
+      <h3>{{loginCredentials.user.name}}</h3>
+    </div>
     <ul class="nav nav-pills nav-justified">
-      <li class="nav-item">
-        <a class="nav-link">Info</a>
+      <li class="nav-item" routerLink="/profile/info">
+        <a class="nav-link">Info
+          <i class="fa fa-info-circle"></i>
+        </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" routerLink="/profile/images">
         <a class="nav-link">Images</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link">Analytics</a>
+        <a class="nav-link">Analytics
+          <i class="fa fa-chart-line"></i>
+        </a>
       </li>
       <li class="nav-item">
         <a class="nav-link">connections</a>
