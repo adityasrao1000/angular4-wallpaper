@@ -53,7 +53,6 @@ export function provideConfig() {
     InfiniteScrollModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
-    FormsModule,
     SocialLoginModule,
     NgbModule
   ],
