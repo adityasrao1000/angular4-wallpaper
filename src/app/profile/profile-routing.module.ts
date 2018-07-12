@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { ProfileComponent } from './profile.component';
 import { InfoComponent } from './info/info.component';
 import { PictureComponent } from './pictures/pictures.component';
+import { AnalyticsComponent } from './analytics/analytics.component';
 
 const appRoutes: Routes = [
     {
@@ -17,6 +18,10 @@ const appRoutes: Routes = [
             {
                 path: 'images',
                 component: PictureComponent,
+            },
+            {
+                path: 'analytics',
+                component: AnalyticsComponent,
             }
         ]
     }

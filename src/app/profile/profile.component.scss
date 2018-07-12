@@ -2,25 +2,26 @@
   background: #232323;
   color: grey;
   &:hover {
-      cursor: pointer;
+    cursor: pointer;
   }
 }
 
-.nav-pills .active {
+.active-link {
   background: black;
+  outline: none;
 }
 
 .nav-pills .nav-item {
-  &:nth-child(1){
+  &:nth-child(1) {
     color: #ACEC00;
   }
-  &:nth-child(2){
+  &:nth-child(2) {
     color: #00BBD6;
   }
-  &:nth-child(3){
+  &:nth-child(3) {
     color: #EF3C79;
   }
-  &:nth-child(4){
+  &:nth-child(4) {
     color: #BA65C9;
   }
 }
