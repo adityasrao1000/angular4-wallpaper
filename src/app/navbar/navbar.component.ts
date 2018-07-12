@@ -16,6 +16,8 @@ export class NavbarComponent {
   links: string[] = ['home', 'categories', 'about', 'latest'];
   visible = false;
   ModalComponent: any;
+  ser: string;
+  ser1: string;
 
   show() {
     this.visible = !this.visible;
@@ -27,7 +29,10 @@ export class NavbarComponent {
 
   constructor(
     private route: ActivatedRoute,
-    public loginCredentials: UserCredentialsService) { }
+    public loginCredentials: UserCredentialsService) {
+      this.ser = '';
+      this.ser1 = '';
+    }
 
   logout() {
     localStorage.removeItem('token');
