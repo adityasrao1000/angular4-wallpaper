@@ -13,7 +13,7 @@ import { UserCredentialsService } from '../utils/user-credentials.service';
 export class NavbarComponent {
   @ViewChild(ModalComponent) modal: ModalComponent;
 
-  links: string[] = ['home', 'categories', 'contacts', 'latest'];
+  links: string[] = ['home', 'categories', 'about', 'latest'];
   visible = false;
   ModalComponent: any;
 
