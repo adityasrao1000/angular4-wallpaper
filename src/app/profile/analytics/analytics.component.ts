@@ -10,6 +10,9 @@ export class AnalyticsComponent implements OnInit {
   constructor() { }
   Highcharts = Highcharts;
   chartOptions = {
+    title: {
+      text: 'Downloads'
+    },
     series: [{
       data: [1, 2, 3]
     }]
@@ -23,8 +26,8 @@ export class AnalyticsComponent implements OnInit {
         backgroundColor: {
           linearGradient: { x1: 0, y1: 0, x2: 1, y2: 1 },
           stops: [
-            [0, '#2a2a2b'],
-            [1, '#3e3e40']
+            [0, '#302f2f'],
+            [1, '#302f2f']
           ]
         },
         style: {
@@ -36,7 +39,7 @@ export class AnalyticsComponent implements OnInit {
         style: {
           color: '#E0E0E3',
           textTransform: 'uppercase',
-          fontSize: '20px'
+          fontSize: '18px'
         }
       },
       subtitle: {
@@ -217,5 +220,4 @@ export class AnalyticsComponent implements OnInit {
     this.Highcharts.setOptions(Highcharts.theme);
 
   }
-
 }
