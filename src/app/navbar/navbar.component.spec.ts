@@ -70,10 +70,6 @@ describe('Component: NavbarComponent', () => {
     it('should be undefined', () => {
         expect(component.open()).toBeUndefined();
     });
-
-    it('should be undefined', () => {
-        expect(component.closeSearch()).toBeUndefined();
-    });
     it('logout should be called', () => {
         fixture.whenStable().then(() => {
             window.localStorage.setItem('token', JSON.stringify({ type: 'google', token: 'asadfgg' }));

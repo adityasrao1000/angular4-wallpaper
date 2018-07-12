@@ -8,7 +8,7 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { AppRoutingModule } from './app-routing.module';
 import { WallpapersComponent } from './wallpaper/wallpapers.component';
 import { ImagesComponent } from './images/images.component';
-import { ContactsComponent } from './contacts/contacts.component';
+import { AboutComponent } from './about/about.component';
 import { NotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { ImageService } from './images/image.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -67,7 +67,7 @@ export function provideConfig() {
     CategoriesComponent,
     WallpapersComponent,
     ImagesComponent,
-    ContactsComponent,
+    AboutComponent,
     NotFoundComponent,
     SafePipe,
     SearchPipe,

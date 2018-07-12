@@ -15,8 +15,6 @@ export class NavbarComponent {
 
   links: string[] = ['home', 'categories', 'contacts', 'latest'];
   visible = false;
-  ser = '';
-  ser1 = '';
   ModalComponent: any;
 
   show() {
@@ -25,11 +23,6 @@ export class NavbarComponent {
 
   open(): void {
     this.modal.show = true;
-  }
-
-  closeSearch() {
-    this.ser = '';
-    this.ser1 = '';
   }
 
   constructor(

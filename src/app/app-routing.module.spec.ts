@@ -7,7 +7,7 @@ import { NotFoundComponent } from './pagenotfound/pagenotfound.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { WallpapersComponent } from './wallpaper/wallpapers.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { ContactsComponent } from './contacts/contacts.component';
+import { AboutComponent } from './about/about.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AppComponent } from './app.component';
@@ -34,7 +34,7 @@ describe('Router: App', () => {
             declarations: [
                 MainpageComponent,
                 WallpapersComponent,
-                ContactsComponent,
+                AboutComponent,
                 NotFoundComponent,
                 CategoriesComponent,
                 RegisterComponent,

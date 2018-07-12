@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'contacts',
-  templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.css']
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.css']
 })
-export class ContactsComponent {
+export class AboutComponent {
 
   submitted = false;
 
