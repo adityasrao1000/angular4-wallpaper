@@ -71,7 +71,7 @@ describe('Component: NavbarComponent', () => {
         expect(component.open()).toBeUndefined();
     });
     it('logout should be undefined', () => {
-            window.localStorage.setItem('token', JSON.stringify({ type: 'google', token: 'asadfgg' }));
-            expect(component.logout()).toBeUndefined();
+        window.localStorage.setItem('token', JSON.stringify({ type: 'google', token: 'asadfgg' }));
+        expect(component.logout()).toBeUndefined();
     });
 });

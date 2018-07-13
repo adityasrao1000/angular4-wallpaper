@@ -4,7 +4,7 @@ import { ImagesComponent } from './images.component';
 import { ImageService } from './image.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ActivatedRouteStub } from '../activated-router-stub';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, PreloadAllModules } from '@angular/router';
 
 describe('Component: ImagesComponent', () => {
 
@@ -44,6 +44,18 @@ describe('Component: ImagesComponent', () => {
             expect(component.ngOnInit()).toHaveBeenCalled();
         });
     });
+    it('getImagesWithObservable should resolve', inject([ImageService], s => {
+        fixture.whenStable().then(() => {
+            spyOn(s, 'getImagesWithObservable').and.returnValue(Promise.resolve());
+            expect(component.ngOnInit()).toHaveBeenCalled();
+        });
+    }));
+    it('ngoninit should be called', () => {
+        fixture.whenStable().then(() => {
+            expect(component.ngOnInit()).toHaveBeenCalled();
+        });
+    });
+
     it('function should be undefined', () => {
         expect(component.show('https://img.jpg')).toBeUndefined();
     });

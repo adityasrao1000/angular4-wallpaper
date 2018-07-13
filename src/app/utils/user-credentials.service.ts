@@ -31,8 +31,6 @@ export class UserCredentialsService implements CanActivate {
                 if (this.user.token) {
                     localStorage.setItem('token', JSON.stringify({ provider: 'google', token: this.user.token }));
                 }
-            } else {
-                window.alert('There\'s some issue with your local storage, please upgrage your browser if this feature is not available');
             }
         });
     }
