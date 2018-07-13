@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
-import { map } from 'rxjs/operators';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -10,7 +9,7 @@ import { map } from 'rxjs/operators';
   providers: [NgbCarouselConfig]
 })
 
-export class ImageSliderComponent implements OnInit {
+export class ImageSliderComponent {
   images: Array<string> = ['https://stmed.net/sites/default/files/anime-wallpapers-25720-6452473.jpg',
     'https://i.imgur.com/drqfNuf.jpg',
     'http://nd06.jxs.cz/293/972/4123084565_101521458_o2.jpg'];
@@ -20,7 +19,5 @@ export class ImageSliderComponent implements OnInit {
     this.config.interval = 5000;
     this.config.wrap = true;
     this.config.keyboard = false;
-  }
-  ngOnInit() {
   }
 }

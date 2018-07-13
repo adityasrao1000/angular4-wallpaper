@@ -1,8 +1,10 @@
 import { TestBed, inject } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
 import { UserCredentialsService } from './user-credentials.service';
-import { AuthService, AuthServiceConfig, GoogleLoginProvider } from 'ng4-social-login';
+import { AuthService, AuthServiceConfig, GoogleLoginProvider, SocialUser } from 'ng4-social-login';
 import { ValidateOauthService } from './validate-oauth.service';
+import { of } from 'rxjs/observable/of';
+import { _throw } from 'rxjs/observable/throw';
 
 const CONFIG = new AuthServiceConfig([
     {
@@ -31,18 +33,33 @@ describe('Service : UserCredentialsService', () => {
         window.localStorage.setItem('token', JSON.stringify({ provider: 'google', token: 'sssssde' }));
     }));
 
+    afterEach(() => {
+        service = null;
+        window.localStorage.removeItem('token');
+    });
+
     it('should create service', () => {
         expect(service).toBeTruthy();
     });
+
     it('should be false', () => {
         expect(service.canActivate()).toEqual(false);
     });
 
-    it('should be undefined', () => {
+    it('should be undefined', inject([ValidateOauthService], v => {
+        spyOn(v, 'validate').and.returnValue(of([1, 2]));
         expect(service.login()).toBeUndefined();
-    });
+    }));
 
-    it('should be undefined', () => {
+    it('should be undefined', inject([ValidateOauthService], v => {
+        spyOn(v, 'validate').and.returnValue(_throw('error'));
+        expect(service.login()).toBeUndefined();
+    }));
+
+    it('should be undefined', inject([AuthService], s => {
+        const spy = spyOn(s, 'signIn').and.returnValue(Promise.resolve(true));
+        service.user = new SocialUser();
+        service.user.token = true;
         expect(service.signInWithGoogle()).toBeUndefined();
-    });
+    }));
 });
