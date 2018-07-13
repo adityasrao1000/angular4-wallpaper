@@ -17,8 +17,8 @@ export class WallpapersComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.sub = this.route.params.subscribe(params => {
-      this.id = params['id'];
+    this.sub = this.route.paramMap.subscribe(params => {
+      this.id = params.get('id');
     });
 
   }

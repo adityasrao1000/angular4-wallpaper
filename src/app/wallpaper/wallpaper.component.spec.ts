@@ -35,9 +35,9 @@ describe('Component: WallpaperComponent', () => {
     it('should create component', () => {
         expect(component).toBeTruthy();
     });
-    it('ngoninit should be truthy', () => {
+    it('ngoninit should be called', () => {
         fixture.whenStable().then(() => {
-            expect(component.ngOnInit()).toBeTruthy();
+            expect(component.ngOnInit()).toHaveBeenCalled();
         });
     });
     it('ngondestroy should be truthy', () => {

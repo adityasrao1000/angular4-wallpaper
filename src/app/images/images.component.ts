@@ -25,8 +25,8 @@ export class ImagesComponent implements OnInit, OnDestroy {
   constructor(private imageService: ImageService, private route: ActivatedRoute, @Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
-    this.sub = this.route.params.subscribe(params => {
-      this.imageService.getImagesWithObservable(params['id'])
+    this.sub = this.route.paramMap.subscribe(params => {
+      this.imageService.getImagesWithObservable(params.get('id'))
         .then(result => this.wallpaper = result, error => console.log(error));
     });
   }
