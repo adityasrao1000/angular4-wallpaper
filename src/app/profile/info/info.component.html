@@ -1,1 +1,16 @@
-<h2>Info</h2>
+<div *ngIf="user.provider">
+  <p class="title">Provider</p>
+  <p class="info">{{user.provider}}</p>
+</div>
+<div *ngIf="user.email">
+  <p class="title"> <i class="fa fa-envelope"></i> Email</p>
+  <p class="info">{{user.email}}</p>
+</div>
+<div *ngIf="user.name">
+  <p class="title">Name</p>
+  <p class="info">{{user.name}}</p>
+</div>
+<div *ngIf="user.id">
+  <p class="title">Id</p>
+  <p class="info">{{user.id}}</p>
+</div>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { SocialUser, AuthService, GoogleLoginProvider, AuthServiceConfig } from 'ng4-social-login';
+import { SocialUser, AuthService, GoogleLoginProvider } from 'ng4-social-login';
 import { CanActivate } from '@angular/router';
 import { ValidateOauthService } from './validate-oauth.service';
 
