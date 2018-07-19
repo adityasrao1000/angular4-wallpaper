@@ -2,7 +2,7 @@
   padding: 2%;
 }
 
-.img-responsive {
+.img-fluid {
   border: 5px solid #232323;
   cursor: pointer;
   -webkit-box-shadow: -4px 6px 45px -14px rgba(0, 0, 0, 0.75);
@@ -10,7 +10,7 @@
   box-shadow: -4px 6px 45px -14px rgba(0, 0, 0, 0.75);
 }
 
-.img-responsive:hover {
+.img-fluid:hover {
   border: 5px solid lightgreen;
 }
 
