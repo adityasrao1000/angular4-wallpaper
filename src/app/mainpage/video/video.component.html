@@ -2,7 +2,7 @@
   <div *ngFor="let v of videos">
     <div class="vidcontainer">
       <div class="row">
-        <div class="col-xs-6">
+        <div class="col-6">
           <div class="embed-responsive embed-responsive-16by9">
             <iframe [src]=" v.url | safe" class="embed-responsive-item" frameborder="0" border="0">
               <p>Sorry your browser does not support iframes</p>
@@ -10,7 +10,7 @@
           </div>
           <br>
         </div>
-        <div class="col-xs-6">
+        <div class="col-6">
           <h3 style="margin-top:-3px;">{{v.name}}</h3>
           <p style="color:grey">
             <b>release date: {{v.date}}</b>

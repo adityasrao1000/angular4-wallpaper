@@ -2,7 +2,6 @@
   <br>
   <div [style.display]="display">
     <img src="{{imglink}}" alt="wallpaper" [ngClass]="['img-fluid', 'animate']" id="wallpaper">
-
     <a href="{{imglink}}" download>
       <button type="button" class="btn btn-default">Download Max Resolution</button>
     </a>
@@ -18,7 +17,7 @@
     </div>
     <div class="col-sm-6">
       <div *ngFor="let paper of wallpaper">
-        <img class="img-responsive thumbnail" src="{{paper.src}}" alt="image" (click)="show(paper.src)">
+        <img class="img-fluid thumbnail" src="{{paper.src}}" alt="image" (click)="show(paper.src)">
       </div>
     </div>
     <div class="col-sm-3">
