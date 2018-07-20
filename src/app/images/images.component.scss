@@ -17,7 +17,8 @@
 .btn {
   background-color: #232323;
   color: #cc3e4a;
-  margin-left: 23%;
+  display: block;
+  margin: auto;
   margin-top: 25px;
   border: none;
   &:hover {
