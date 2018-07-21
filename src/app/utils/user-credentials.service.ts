@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { SocialUser, AuthService, GoogleLoginProvider } from 'ng4-social-login';
+import { SocialUser, AuthService, GoogleLoginProvider, FacebookLoginProvider } from 'ng4-social-login';
 import { CanActivate } from '@angular/router';
 import { ValidateOauthService } from './validate-oauth.service';
 
@@ -34,12 +34,27 @@ export class UserCredentialsService implements CanActivate {
             }
         });
     }
+    signInWithFB(): void {
+        this.authService.signIn(FacebookLoginProvider.PROVIDER_ID).then(() => {
+            if (localStorage) {
+                if (this.user.token) {
+                    localStorage.setItem('token', JSON.stringify({ provider: 'facebook', token: this.user.token }));
+                }
+            }
+        });
+    }
     login() {
         if (localStorage.getItem('token') !== null) {
-            const token = JSON.parse(localStorage.getItem('token')).token;
-            if (token) {
-                this.oauth.validate(token)
-                    .subscribe(result => this.signInWithGoogle(), err => console.log(err));
+            const obj = JSON.parse(localStorage.getItem('token'));
+            if (obj) {
+                if (obj.provider === 'facebook') {
+                    this.oauth.validateFB(obj.token)
+                        .subscribe(result => this.signInWithFB(), err => console.log(err));
+                }
+                if (obj.provider === 'google') {
+                    this.oauth.validate(obj.token)
+                        .subscribe(result => this.signInWithGoogle(), err => console.log(err));
+                }
             }
         }
     }

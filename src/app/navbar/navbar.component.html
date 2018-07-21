@@ -80,7 +80,7 @@
   </div>
 </div>
 <app-modal [title]="'Sign In'" *ngIf="!loginCredentials.loggedIn">
-  <a class="btn btn-block btn-social btn-facebook">
+  <a class="btn btn-block btn-social btn-facebook" (click)="loginCredentials.signInWithFB()">
     <span class="fa fa-facebook"></span> Sign in with facebook
   </a>
   <h4 style="color: grey; text-align: center">Or</h4>

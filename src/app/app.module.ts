@@ -28,6 +28,7 @@ import {
   SocialLoginModule,
   AuthServiceConfig,
   GoogleLoginProvider,
+  FacebookLoginProvider,
   // FacebookLoginProvider
 } from 'ng4-social-login';
 import { ValidateOauthService } from './utils/validate-oauth.service';
@@ -37,6 +38,10 @@ const CONFIG = new AuthServiceConfig([
   {
     id: GoogleLoginProvider.PROVIDER_ID,
     provider: new GoogleLoginProvider('335091079574-vtlsr39j241l0tpn5rvmmvp2dksanhbs.apps.googleusercontent.com')
+  },
+  {
+    id: FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider('1797615520327720')
   }
 ], false);
 
@@ -53,7 +58,7 @@ export function provideConfig() {
     AppRoutingModule,
     HttpClientModule,
     SocialLoginModule,
-    NgbModule
+    NgbModule.forRoot()
   ],
   declarations: [
     AppComponent,
