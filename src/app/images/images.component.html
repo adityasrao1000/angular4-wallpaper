@@ -1,12 +1,33 @@
 <div class="container-fluid">
   <br>
-  <div [style.display]="display">
-    <img [src]="imglink" alt="wallpaper" [ngClass]="['img-fluid', 'animate']" id="wallpaper">
-    <a [href]="imglink" download>
-      <button type="button" class="btn btn-default">Download Max Resolution</button>
-    </a>
-  </div>
+  <div class="row">
+    <div class="col-sm-2">
 
+    </div>
+    <div class="col-sm-8">
+      <div [style.display]="display">
+        <div>
+          <img [src]="imglink" alt="wallpaper" [ngClass]="['img-fluid', 'animate']" id="wallpaper">
+          <div ngbDropdown class=" download">
+            <button class="btn btn-default" id="dropdownBasic1" ngbDropdownToggle>Download </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu">
+              <button class="dropdown-item">480 X 320</button>
+              <button class="dropdown-item">1366 X 768</button>
+              <button class="dropdown-item">
+                <a [href]="imglink" download>Original</a>
+              </button>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-2">
+
+    </div>
+  </div>
   <br>
   <hr>
   <p class="click-to-view">Click on the image to view</p>

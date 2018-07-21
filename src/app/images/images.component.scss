@@ -1,6 +1,4 @@
 #wallpaper {
-  width: 740px;
-  height: auto;
   margin: auto;
   border: 5px solid #232323;
   border-radius: 2px;
@@ -12,6 +10,13 @@
 .img-fluid {
   display: block;
   margin: auto;
+}
+
+.dropdown-menu {
+  background: #232323;
+  .dropdown-item {
+    color: grey
+  }
 }
 
 .click-to-view {
@@ -72,20 +77,3 @@ hr {
   border-color: grey;
 }
 
-@media screen and (max-width: 500px) {
-  #wallpaper {
-    height: 240px;
-  }
-  .btn {
-    margin-left: 14px;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  #wallpaper {
-    height: 170px;
-  }
-  .btn {
-    margin-left: 14px;
-  }
-}
