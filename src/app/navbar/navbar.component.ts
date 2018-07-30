@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { ModalComponent } from '../modal/modal.component';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { UserCredentialsService } from '../utils/user-credentials.service';
 
 @Component({
@@ -29,6 +29,7 @@ export class NavbarComponent {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     public loginCredentials: UserCredentialsService) {
       this.ser = '';
       this.ser1 = '';
@@ -37,5 +38,8 @@ export class NavbarComponent {
   logout() {
     localStorage.removeItem('token');
     this.loginCredentials.loggedIn = false;
+    if (this.router.url.indexOf('/profile') > -1) {
+       this.router.navigate(['\home']);
+    }
   }
 }

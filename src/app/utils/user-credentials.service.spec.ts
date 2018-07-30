@@ -5,6 +5,7 @@ import { AuthService, AuthServiceConfig, GoogleLoginProvider, SocialUser } from 
 import { ValidateOauthService } from './validate-oauth.service';
 import { of } from 'rxjs/observable/of';
 import { _throw } from 'rxjs/observable/throw';
+import { throwError } from 'rxjs';
 
 const CONFIG = new AuthServiceConfig([
     {
@@ -62,4 +63,24 @@ describe('Service : UserCredentialsService', () => {
         service.user.token = true;
         expect(service.signInWithGoogle()).toBeUndefined();
     }));
+
+    it('should be undefined', inject([AuthService], s => {
+        const spy = spyOn(s, 'signIn').and.returnValue(Promise.resolve(true));
+        service.user = new SocialUser();
+        service.user.token = true;
+        expect(service.signInWithFB()).toBeUndefined();
+    }));
+
+    it('should be undefined', inject([ValidateOauthService], v => {
+        window.localStorage.setItem('token', JSON.stringify({ provider: 'facebook', token: 'sssssde' }));
+        spyOn(v, 'validateFB').and.returnValue(of([1, 2]));
+        expect(service.login()).toBeUndefined();
+    }));
+
+    it('should be undefined', inject([ValidateOauthService], v => {
+        window.localStorage.setItem('token', JSON.stringify({ provider: 'facebook', token: 'sssssde' }));
+        spyOn(v, 'validateFB').and.returnValue(_throw('error'));
+        expect(service.login()).toBeUndefined();
+    }));
+
 });

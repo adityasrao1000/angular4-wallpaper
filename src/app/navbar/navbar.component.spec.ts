@@ -37,7 +37,7 @@ describe('Component: NavbarComponent', () => {
             providers: [AuthService,
                 {
                     provide: Router,
-                    useClass: class { navigate = jasmine.createSpy('navigate'); }
+                    useClass: class { navigate = jasmine.createSpy('navigate'); url = '/profile'; }
                 },
                 { provide: ActivatedRoute, useValue: { paramMap: activatedRoute.paramMap } },
                 {
