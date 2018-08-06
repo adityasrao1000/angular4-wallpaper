@@ -27,13 +27,17 @@
 .btn {
   background-color: #232323;
   color: #cc3e4a;
-  display: block;
-  margin: auto;
   margin-top: 25px;
   border: none;
   &:hover {
     color: grey;
   }
+}
+
+.fa-facebook-square {
+  color: #3b5998;
+  font-size: 2.4em;
+  margin-top: .6em;
 }
 
 .thumbnail {
@@ -76,4 +80,3 @@
 hr {
   border-color: grey;
 }
-
