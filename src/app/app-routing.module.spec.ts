@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SocialLoginModule } from 'ng4-social-login';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserCredentialsService } from './utils/user-credentials.service';
+import { CommunitiesComponent } from './communities/communities.component';
 
 describe('Router: App', () => {
 
@@ -39,7 +40,8 @@ describe('Router: App', () => {
                 CategoriesComponent,
                 RegisterComponent,
                 ProfileComponent,
-                AppComponent
+                AppComponent,
+                CommunitiesComponent
             ],
             providers: [UserCredentialsService],
             schemas: [NO_ERRORS_SCHEMA]

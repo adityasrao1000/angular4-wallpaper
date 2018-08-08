@@ -7,6 +7,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { RegisterComponent } from './register/register.component';
 import { UserCredentialsService } from './utils/user-credentials.service';
 import { NgModule } from '@angular/core';
+import { CommunitiesComponent } from './communities/communities.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -16,8 +17,10 @@ export const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'register', component: RegisterComponent },
   {
-    path: 'profile', loadChildren: './profile/profile.module#ProfileModule', canActivate: [UserCredentialsService] },
-  { component: NotFoundComponent, path: '**' }
+    path: 'profile', loadChildren: './profile/profile.module#ProfileModule', canActivate: [UserCredentialsService]
+  },
+  { path: 'communities', component: CommunitiesComponent },
+  { component: NotFoundComponent, path: '**' },
 ];
 @NgModule({
   imports: [

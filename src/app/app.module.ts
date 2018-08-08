@@ -33,6 +33,7 @@ import {
 } from 'ng4-social-login';
 import { ValidateOauthService } from './utils/validate-oauth.service';
 import { UserCredentialsService } from './utils/user-credentials.service';
+import { CommunitiesComponent } from './communities/communities.component';
 
 const CONFIG = new AuthServiceConfig([
   {
@@ -78,7 +79,8 @@ export function provideConfig() {
     SearchPipe,
     FooterComponent,
     ModalComponent,
-    RegisterComponent
+    RegisterComponent,
+    CommunitiesComponent
   ],
   providers: [
     {
