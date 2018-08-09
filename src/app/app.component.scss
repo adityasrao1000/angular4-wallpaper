@@ -1,3 +1,19 @@
-.con{
-    min-height: 500px;
+.con {
+  min-height: 500px;
+}
+
+.scroller {
+  position: fixed;
+  bottom: 0.9em;
+  right: .7em;
+  font-size: 3em;
+  padding: 0 .2em;
+  opacity: .7;
+  height: 1.2em;
+  cursor: pointer;
+  color: grey;
+  background: #131212;
+  &:hover {
+    color: red;
+  }
 }
