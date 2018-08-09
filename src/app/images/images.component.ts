@@ -37,11 +37,8 @@ export class ImagesComponent implements OnInit, OnDestroy {
 
   show(link): void {
 
-    if (this.display === 'none') {
-      this.display = 'block';
-    }
+    this.display = 'block';
     this.imglink = link;
-
     // scroll to top of page
     this.document.getElementById('wallpaper').scrollIntoView();
   }
