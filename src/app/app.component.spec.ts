@@ -61,4 +61,27 @@ describe('Component: AppComponent', () => {
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   }));
+
+  it('scrollTop function coverage', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    expect(app.scrollTop()).toBeUndefined();
+  }));
+
+  it('display value should be none', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    app.scroll();
+    fixture.detectChanges();
+    expect(app.display).toBe('none');
+  }));
+
+  it('display value should be block', async(() => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.debugElement.componentInstance;
+    pageYOffset = 151;
+    app.scroll();
+    fixture.detectChanges();
+    expect(app.display).toBe('block');
+  }));
 });
