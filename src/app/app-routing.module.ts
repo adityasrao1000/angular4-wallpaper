@@ -8,6 +8,7 @@ import { RegisterComponent } from './register/register.component';
 import { UserCredentialsService } from './utils/user-credentials.service';
 import { NgModule } from '@angular/core';
 import { CommunitiesComponent } from './communities/communities.component';
+import { FeaturedComponent } from './communities/featured/featured.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -19,7 +20,13 @@ export const routes: Routes = [
   {
     path: 'profile', loadChildren: './profile/profile.module#ProfileModule', canActivate: [UserCredentialsService]
   },
-  { path: 'communities', component: CommunitiesComponent },
+  {
+    path: 'communities', component: CommunitiesComponent,
+    children: [
+      { path: '', redirectTo: '/communities/featured', pathMatch: 'full' },
+      { path: 'featured', component: FeaturedComponent }
+    ]
+  },
   { component: NotFoundComponent, path: '**' },
 ];
 @NgModule({
