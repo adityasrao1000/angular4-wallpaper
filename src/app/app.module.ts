@@ -36,6 +36,7 @@ import { UserCredentialsService } from './utils/user-credentials.service';
 import { CommunitiesComponent } from './communities/communities.component';
 import { FeaturedComponent } from './communities/featured/featured.component';
 import { JoinedComponent } from './communities/joined/joined.component';
+import { LatestComponent } from './communities/latest/latest.component';
 
 const CONFIG = new AuthServiceConfig([
   {
@@ -84,7 +85,8 @@ export function provideConfig() {
     RegisterComponent,
     CommunitiesComponent,
     FeaturedComponent,
-    JoinedComponent
+    JoinedComponent,
+    LatestComponent
   ],
   providers: [
     {

@@ -10,6 +10,7 @@ import { NgModule } from '@angular/core';
 import { CommunitiesComponent } from './communities/communities.component';
 import { FeaturedComponent } from './communities/featured/featured.component';
 import { JoinedComponent } from './communities/joined/joined.component';
+import { LatestComponent } from './communities/latest/latest.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -26,7 +27,8 @@ export const routes: Routes = [
     children: [
       { path: '', redirectTo: '/communities/featured', pathMatch: 'full' },
       { path: 'featured', component: FeaturedComponent },
-      { path: 'joined', component: JoinedComponent }
+      { path: 'joined', component: JoinedComponent },
+      { path: 'latest', component: LatestComponent }
     ]
   },
   { component: NotFoundComponent, path: '**' },
