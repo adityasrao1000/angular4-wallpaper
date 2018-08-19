@@ -35,6 +35,7 @@ import { ValidateOauthService } from './utils/validate-oauth.service';
 import { UserCredentialsService } from './utils/user-credentials.service';
 import { CommunitiesComponent } from './communities/communities.component';
 import { FeaturedComponent } from './communities/featured/featured.component';
+import { JoinedComponent } from './communities/joined/joined.component';
 
 const CONFIG = new AuthServiceConfig([
   {
@@ -82,7 +83,8 @@ export function provideConfig() {
     ModalComponent,
     RegisterComponent,
     CommunitiesComponent,
-    FeaturedComponent
+    FeaturedComponent,
+    JoinedComponent
   ],
   providers: [
     {

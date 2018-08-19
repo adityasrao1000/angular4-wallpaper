@@ -9,6 +9,7 @@ import { UserCredentialsService } from './utils/user-credentials.service';
 import { NgModule } from '@angular/core';
 import { CommunitiesComponent } from './communities/communities.component';
 import { FeaturedComponent } from './communities/featured/featured.component';
+import { JoinedComponent } from './communities/joined/joined.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -24,7 +25,8 @@ export const routes: Routes = [
     path: 'communities', component: CommunitiesComponent,
     children: [
       { path: '', redirectTo: '/communities/featured', pathMatch: 'full' },
-      { path: 'featured', component: FeaturedComponent }
+      { path: 'featured', component: FeaturedComponent },
+      { path: 'joined', component: JoinedComponent }
     ]
   },
   { component: NotFoundComponent, path: '**' },
