@@ -37,6 +37,7 @@ import { CommunitiesComponent } from './communities/communities.component';
 import { FeaturedComponent } from './communities/featured/featured.component';
 import { JoinedComponent } from './communities/joined/joined.component';
 import { LatestComponent } from './communities/latest/latest.component';
+import { CommunityComponent } from './community/community.component';
 
 const CONFIG = new AuthServiceConfig([
   {
@@ -86,7 +87,8 @@ export function provideConfig() {
     CommunitiesComponent,
     FeaturedComponent,
     JoinedComponent,
-    LatestComponent
+    LatestComponent,
+    CommunityComponent
   ],
   providers: [
     {

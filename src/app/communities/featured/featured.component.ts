@@ -12,6 +12,6 @@ export class FeaturedComponent {
         { image: './assets/img/deathnote.jpg', name: 'death note ja buhula ;)', description: 'sdjnnjdnjrdnjccn rifrjf', members: 12 },
         { image: './assets/img/bleach.jpg', name: 'memerse of bleach lovers', description: 'jhckdjcn hdhrh rkjfkrfmkfmkcn n', members: 99 },
         { image: './assets/img/naruto.jpg', name: 'Bobi no maru', description: 'members de jinaio', members: 404 },
-        { image: './assets/img/trigun.jpg', name: 'FAN PAGE', description: '', members: 122 }
+        { image: './assets/img/trigun.jpg', name: 'FAN PAGE', description: '', members: 122 },
     ];
 }

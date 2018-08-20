@@ -11,6 +11,7 @@ import { CommunitiesComponent } from './communities/communities.component';
 import { FeaturedComponent } from './communities/featured/featured.component';
 import { JoinedComponent } from './communities/joined/joined.component';
 import { LatestComponent } from './communities/latest/latest.component';
+import { CommunityComponent } from './community/community.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -22,6 +23,7 @@ export const routes: Routes = [
   {
     path: 'profile', loadChildren: './profile/profile.module#ProfileModule', canActivate: [UserCredentialsService]
   },
+  { path: 'community/:id', component: CommunityComponent },
   {
     path: 'communities', component: CommunitiesComponent,
     children: [
