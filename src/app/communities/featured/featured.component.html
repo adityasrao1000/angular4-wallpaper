@@ -1,1 +1,23 @@
-<h1>Featured</h1>
+<div class="row">
+  <div class="col-sm-3">
+
+  </div>
+  <div class="col-sm-6">
+    <br>
+    <div class="holder">
+      <div class="feature-card" *ngFor="let item of featured;">
+        <img [src]="item.image" class="img-fluid">
+        <div class="details">
+          <h4>{{item.name}}</h4>
+          <p>{{item.description}}</p>
+          
+          <i class="fa fa-heart"></i> <span> {{item.members}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3">
+
+  </div>
+</div>
+<br>

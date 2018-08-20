@@ -1,5 +1,40 @@
-h1 {
-  color: grey;
-  margin-top: .25em;
-  text-align: center;
+.holder {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+  -webkit-column-gap: 1.5em;
+  -moz-column-gap: 1.5em;
+  column-gap: 1.5em;
+
+}
+
+.feature-card {
+  margin-bottom: 1em;
+  break-inside: avoid-column;
+  -webkit-break-inside: avoid-column;
+  border-radius: .6em;
+  background-color: #232323;
+  img {
+    max-height: 12em;
+    border-top-right-radius: .6em;
+    border-top-left-radius: .6em;
+    width: 100%;
+  }
+  p {
+    color: grey;
+  }
+  span {
+    color: grey;
+    font-size: 1.15em;
+  }
+  .fa {
+    color: red;
+    font-size: 1.15em;
+  }
+  h4 {
+    color: grey;
+  }
+  .details {
+    padding: .4em;
+  }
 }
