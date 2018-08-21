@@ -54,9 +54,6 @@
     color: grey;
     font-size: 1.5em;
     cursor: pointer;
-    &:hover {
-      color: #E91E63;
-    }
   }
 }
 
@@ -72,7 +69,7 @@
   a {
     cursor: pointer;
     &:not(:first-child) {
-      margin-left: .95em;
+      margin-left: 1em;
     }
     &:hover {
       color: white;

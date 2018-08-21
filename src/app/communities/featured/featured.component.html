@@ -9,9 +9,9 @@
     </p>
     <div *ngIf="filterShow">
       <span class="filter-options">
-        <a>relavence</a>
-        <a>name</a>
-        <a>date</a>
+        <a>time</a>
+        <a (click)="sortByName()">name</a>
+        <a (click)="sortByMembers()">members</a>
       </span>
       <br><br>
     </div>
