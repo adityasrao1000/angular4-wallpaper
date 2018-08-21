@@ -7,6 +7,7 @@ import { Featured } from './featured';
 })
 
 export class FeaturedComponent {
+    filterShow: boolean;
     featured: Featured[] = [
         { image: './assets/img/charlotte.jpg', name: 'Tomiomi hawk ^-^', description: 'lorsem dorsi le mariano fhmkkfmr fjrf', members: 3 },
         { image: './assets/img/codegeass.jpg', name: 'Honi Honi uta', description: 'Suhagin e lambda forci', members: 15 },
@@ -15,4 +16,12 @@ export class FeaturedComponent {
         { image: './assets/img/naruto.jpg', name: 'Bobi no maru', description: 'members de jinaio', members: 404 },
         { image: './assets/img/trigun.jpg', name: 'FAN PAGE', members: 122 },
     ];
+
+    constructor() {
+        this.filterShow = false;
+    }
+
+    toggleFilter(): void {
+        this.filterShow = !this.filterShow;
+    }
 }

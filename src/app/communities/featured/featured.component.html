@@ -4,14 +4,26 @@
   </div>
   <div class="col-sm-6">
     <br>
+    <p class="filter">
+      <i class="fa fa-cog" (click)="toggleFilter()"></i>
+    </p>
+    <div *ngIf="filterShow">
+      <span class="filter-options">
+        <a>relavence</a>
+        <a>name</a>
+        <a>date</a>
+      </span>
+      <br><br>
+    </div>
     <div class="holder">
       <div class="feature-card" *ngFor="let item of featured;">
         <img [src]="item.image" class="img-fluid">
         <div class="details">
           <h4>{{item.name}}</h4>
           <p>{{item.description}}</p>
-          
-          <i class="fa fa-heart"></i> <span> {{item.members}}</span>
+
+          <i class="fa fa-heart"></i>
+          <span> {{item.members}}</span>
         </div>
       </div>
     </div>
