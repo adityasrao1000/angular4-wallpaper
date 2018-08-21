@@ -7,8 +7,10 @@ import { ValidateOauthService } from './validate-oauth.service';
 @Injectable()
 export class UserCredentialsService implements CanActivate {
 
+    // the state of these objects can be changed by other components that share the service.
+    // that is the intended behavior so please keep that in mind before making changes.
     public user: SocialUser;
-    loggedIn: boolean;
+    public loggedIn: boolean;
 
     constructor(private http: HttpClient, private authService: AuthService, private oauth: ValidateOauthService) {
         this.loggedIn = false;
