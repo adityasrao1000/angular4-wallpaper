@@ -17,6 +17,10 @@ import { SocialLoginModule } from 'ng4-social-login';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserCredentialsService } from './utils/user-credentials.service';
 import { CommunitiesComponent } from './communities/communities.component';
+import { CommunityComponent } from './community/community.component';
+import { FeaturedComponent } from './communities/featured/featured.component';
+import { JoinedComponent } from './communities/joined/joined.component';
+import { LatestComponent } from './communities/latest/latest.component';
 
 describe('Router: App', () => {
 
@@ -41,7 +45,11 @@ describe('Router: App', () => {
                 RegisterComponent,
                 ProfileComponent,
                 AppComponent,
-                CommunitiesComponent
+                CommunitiesComponent,
+                CommunityComponent,
+                FeaturedComponent,
+                JoinedComponent,
+                LatestComponent
             ],
             providers: [UserCredentialsService],
             schemas: [NO_ERRORS_SCHEMA]
