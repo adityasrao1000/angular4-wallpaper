@@ -1,7 +1,6 @@
-import { Component, OnInit, AfterViewInit, HostListener, ElementRef } from '@angular/core';
-import { GoogleLoginProvider, SocialUser, AuthService } from 'ng4-social-login';
-import { ValidateOauthService } from './utils/validate-oauth.service';
-
+import { Component, HostListener } from '@angular/core';
+import { merge, of, fromEvent, Observable } from 'rxjs';
+import { mapTo } from 'rxjs/operators';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,11 +8,30 @@ import { ValidateOauthService } from './utils/validate-oauth.service';
 })
 
 export class AppComponent {
-
+  online: Observable<boolean>;
+  isonline: boolean;
   display: string;
 
   constructor() {
     this.display = 'none';
+    this.online = merge(
+      of(navigator.onLine),
+      fromEvent(window, 'online').pipe(mapTo(true)),
+      fromEvent(window, 'offline').pipe(mapTo(false))
+    );
+
+    /**
+     * subscribe to the online observable
+     * if online return true, reinitialize socket
+     * else set isonline to false
+     */
+    this.online.subscribe(online => {
+      if (online) {
+        this.isonline = true;
+      } else {
+        this.isonline = false;
+      }
+    });
   }
 
   scrollTop() {
