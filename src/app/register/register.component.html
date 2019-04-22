@@ -12,33 +12,41 @@
         <form (ngSubmit)="onSubmit(myform1)" [formGroup]="myform1" *ngIf="i === 0">
           <div class="form-group">
             <label for="usr">Name:</label>
-            <input type="text" class="form-control" placeholder="Enter your name" formControlName="name">
+            <input type="text" class="form-control" placeholder="Enter your name" formControlName="name"
+              [ngClass]="{'invalid': name.invalid, 'valid': !name.invalid}">
           </div>
           <div class="form-group">
             <label for="pwd">Email:</label>
-            <input type="email" class="form-control" placeholder="Enter your email" formControlName="email">
+            <input type="email" class="form-control" placeholder="Enter your email" formControlName="email"
+              [ngClass]="{'invalid': email.invalid, 'valid': !email.invalid}">
           </div>
           <button type="submit" class="btn green" style="color:white">&nbsp; Next &nbsp;</button>
         </form>
         <form (ngSubmit)="onSubmit(myform2)" [formGroup]="myform2" *ngIf="i === 1">
           <div class="form-group">
             <label for="usr">Username:</label>
-            <input type="text" class="form-control" placeholder="Enter your name" formControlName="username">
+            <input type="text" class="form-control" placeholder="Enter your name" formControlName="username"
+              [ngClass]="{'invalid': username.invalid, 'valid': !username.invalid}">
           </div>
           <div class="form-group">
-            <label for="pwd">Gender:</label>
-            <input type="email" class="form-control" placeholder="Enter your email" formControlName="gender">
+            <label for="gen">Gender:</label>
+            <select class="form-control" formControlName="gender"
+              [ngClass]="{'invalid': gender.invalid, 'valid': !gender.invalid}">
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
           </div>
           <button type="submit" class="btn green" style="color:white">&nbsp; Next &nbsp;</button>
         </form>
         <form (ngSubmit)="onSubmit(myform3)" [formGroup]="myform3" *ngIf="i === 2">
           <div class="form-group">
             <label for="usr">Password:</label>
-            <input type="text" class="form-control" placeholder="Enter your name" formControlName="password">
+            <input type="text" class="form-control" placeholder="Enter your password" formControlName="password" [ngClass]="{'invalid': password.invalid, 'valid': !password.invalid}">
           </div>
           <div class="form-group">
             <label for="pwd">Re-enter password:</label>
-            <input type="email" class="form-control" placeholder="Enter your email" formControlName="reenterpassword">
+            <input type="email" class="form-control" placeholder="Re-enter your password" formControlName="reenterpassword" [ngClass]="{'invalid': reenterpassword.invalid, 'valid': !reenterpassword.invalid}">
           </div>
           <button type="submit" class="btn green" style="color:white">&nbsp; Submit &nbsp;</button>
         </form>

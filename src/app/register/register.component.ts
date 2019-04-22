@@ -60,13 +60,17 @@ export class RegisterComponent {
     });
   }
 
+  /**
+   *
+   * @param form
+   */
   onSubmit(form: FormGroup) {
     if (form.valid) {
       this.i++;
     }
 
     if (this.i === 3) {
-      alert('done');
+      window.alert('done');
     }
   }
 }
